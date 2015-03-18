@@ -2,6 +2,7 @@ var express = require('express');
   stylus = require('stylus'),
   logger = require('morgan'),
   bodyParser = require('body-parser');
+  db = require(__dirname + '/server/provider/dataprovider.js');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
@@ -23,6 +24,11 @@ app.use(stylus.middleware(
   }
 ));
 app.use(express.static(__dirname + '/public'));
+
+db.insertRecord();
+var rec = (db.getRecord(function(rec){
+  console.log(rec);
+}));
 
 app.get('/partials/:partialPath', function(req, res){
   console.log(req.params.partialPath);
