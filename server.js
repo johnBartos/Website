@@ -25,14 +25,18 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-db.insertRecord();
-var rec = (db.getRecord(function(rec){
-  console.log(rec);
-}));
 
 app.get('/partials/:partialPath', function(req, res){
   console.log(req.params.partialPath);
   res.render('partials/' + req.params.partialPath)
+});
+
+app.get('/records', function(req, res){
+  //db.insertRecord();
+  console.log("Getting records");
+  db.getRecord(function(rec){
+    res.json(rec);
+  });
 });
 
 app.get('*', function(req, res){

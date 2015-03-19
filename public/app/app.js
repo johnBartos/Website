@@ -4,14 +4,19 @@ angular.module('app').config(function($routeProvider, $locationProvider){
     enabled: true
   });
   $routeProvider
-    .when('/', { templateUrl: 'partials/main', controller: 'mainCtrl' })
-    .when('/data', {templateUrl: 'partials/data', controller: 'dataController' })
+    .when('/', { templateUrl: 'partials/main', controller: 'mainController' });
+  $routeProvider
+    .when('/data', { templateUrl: 'partials/data', controller: 'dataController' });
 });
 
-angular.module('app').controller('mainCtrl', function($scope){
+angular.module('app').controller('mainController', function($scope){
   $scope.myVar = "Hello Angular";
 });
 
-angular.module('app').controller('dataController', function($scope){
-  $scope.myData = "Data!";
+angular.module('app').controller('dataController', function($http, $scope){
+  $scope.myVar = "Data!";
+  $http.get('/records')
+  .success(function(data){
+    $scope.myData = data;
+  });
 });
