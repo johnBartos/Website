@@ -1,6 +1,6 @@
 var express = require('express'),
     router = express.Router(),
-    db = require('../provider/test.js');
+    db = require('./test.js');
 
 router.use(function(req, res, next){
     console.log('Record.js middleware ' + req.url);
