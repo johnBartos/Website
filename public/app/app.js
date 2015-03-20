@@ -4,8 +4,8 @@ angular.module('app').config(function($routeProvider, $locationProvider){
         enabled: true
     });
     $routeProvider
-    .when('/', { templateUrl: 'partials/main', controller: 'mainController' });
-    $routeProvider
+    .when('/', { templateUrl: 'partials/main', controller: 'mainController' })
+    //$routeProvider
     .when('/data', { templateUrl: 'partials/data', controller: 'dataController' });
 });
 
