@@ -9,9 +9,9 @@ var config = require('./environment');
 
 module.exports = function(app){
 
-    app.set('views', config.root + '/server/views');
+    //app.set('views', config.root + '/server/views');
     app.set('db', config.root + '/server/database/database.js');
-    app.set('view engine', 'jade');
+    //app.set('view engine', 'jade');
 
     app.use(logger('dev'));
     app.use(bodyParser.urlencoded({
