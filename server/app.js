@@ -9,8 +9,7 @@ var app = express();
 require('./config/express')(app);
 require('./routes.js')(app);
 
-var port = 3030;
-app.listen(port);
-console.log('Listening on port ' + port + ' ...');
+app.listen(config.port);
+console.log('Listening on port ' + config.port + ' ...');
 
 exports = module.exports = app;
