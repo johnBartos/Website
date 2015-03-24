@@ -17,7 +17,6 @@ module.exports = function(app)
     //     console.log(req.params.partialPath);
     //     res.render('partials/' + req.params.partialPath)
     // });
-
     app.route('/*')
         .get(function(req, res){
             res.render(app.get('appPath') + '/index.html');

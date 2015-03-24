@@ -1,4 +1,2 @@
 # MEANsite
-Test website created using the MEAN stack
-Not being developed anymore except for practice
-
+Website created using the MEAN stack with best practices
