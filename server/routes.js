@@ -13,10 +13,8 @@
 
 module.exports = function(app)
 {
-    // router.get('/partials/:partialPath', function(req, res){
-    //     console.log(req.params.partialPath);
-    //     res.render('partials/' + req.params.partialPath)
-    // });
+    app.use('/api/things', require('./api/thing'));
+
     app.route('/*')
         .get(function(req, res){
             res.render(app.get('appPath') + '/index.html');
