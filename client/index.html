@@ -17,6 +17,8 @@
   <!-- endbuild -->
   <!-- build:css({.tmp,client}) app/app.css -->
   <link rel="stylesheet" href="app/app.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" >
+
   <!-- injector:css -->
   <!-- endinjector -->
   <!-- endbuild -->
@@ -26,6 +28,7 @@
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div ui-view=""></div>
+
   <!-- Add your site or application content here -->
   <!--[if lt IE 9]>
   <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -40,11 +43,14 @@
   <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.js"></script>
   <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
   <script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <!-- build:js({.tmp,client}) app/app.js -->
   <script src="app/app.js"></script>
   <script src="app/main/main.js"></script>
   <script src="app/main/main.controller.js"></script>
+  <script src="components/navbar/navbar.controller.js"></script>
+
 
   <!-- injector:js -->
   <!-- endinjector -->
