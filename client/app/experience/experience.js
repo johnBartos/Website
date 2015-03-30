@@ -4,6 +4,6 @@ angular.module('websiteApp')
   .state('experience', {
     url: '/experience',
     templateUrl: 'app/experience/experience.html',
-    controller: 'MainController'
+    controller: 'ExperienceController'
   });
 });

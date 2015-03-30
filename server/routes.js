@@ -15,6 +15,8 @@ module.exports = function(app)
 {
     app.use('/api/things', require('./api/thing'));
 
+    app.use('/api/jobs', require('./api/jobs'));
+
     app.route('/*')
         .get(function(req, res){
             res.render(app.get('appPath') + '/index.html');
