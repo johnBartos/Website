@@ -2,9 +2,9 @@
 
 angular.module('websiteApp')
 .controller('ExperienceController', function ($scope, $http) {
-  $scope.myVar = [];
+  $scope.jobs = [];
 
   $http.get('/api/jobs').success(function(jobs){
-     $scope.myVar = jobs;
+      $scope.jobs = jobs;
   });
 });
