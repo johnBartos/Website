@@ -1,8 +1,15 @@
+<link rel="stylesheet" type="text/css" href="app/experience/experience.css" />
 <div ng-include="'components/navbar/navbar.html'"></div>
-<div class = "container">
-  <div class="row">
-    <div class = "span5">
-        <p> {{myVar}} </p>
+
+<div ng-repeat="job in jobs">
+  <div class = "container">
+    <div class="row">
+      <div class = "col-md-8 exp">
+          <p> {{job.Name}} </p>
+          <p> {{job.Date}}, {{job.Location}} </p>
+          <p> {{job.Position}} </p>
+          <p> {{job.Description}} </p>
+      </div>
     </div>
   </div>
 </div>

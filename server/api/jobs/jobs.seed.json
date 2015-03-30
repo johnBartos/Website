@@ -4,4 +4,12 @@
   "Location": "New Providence, NJ",
   "Position": "Software Engineer",
   "Description": "I hit keys in the correct order and things flash on the screen"
+},
+
+{
+  "Name": "Rutgers, the State University of New Jersey",
+  "Date": "May 2013-May 2014",
+  "Location": "Piscataway, NJ",
+  "Position": "Junior Researcher",
+  "Description": "I made robots fly"
 }
