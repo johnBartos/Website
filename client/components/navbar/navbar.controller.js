@@ -2,21 +2,22 @@
 
 angular.module('websiteApp')
 .controller('NavbarController', function ($scope, $location) {
-  $scope.menu = [{
-    'title': 'Home',
-    'link': '/'
-  },
+  $scope.menu = [
   {
     'title': 'Blag',
     'link': '/blog'
+  },
+  {
+    'title' : 'Projects',
+    'link' : '/projects'
   },
   {
     'title' : 'Experience',
     'link' : '/experience'
   },
   {
-    'title' : 'Projects',
-    'link' : '/projects'
+    'title' : 'Resume',
+    'link' : '/resume'
   },
   {
     'title' : 'About',
