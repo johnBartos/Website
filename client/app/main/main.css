@@ -16,9 +16,3 @@ main{
   background-color: #e3e3e3;
   margin-bottom: 50px;
 }
-
-.fill {
-  min-height: 100%;
-  height: 100%;
-  background-color: #ffffff;
-}
