@@ -1,3 +1,29 @@
-.exp  {
+.tile  {
   background-color: #ffffff;
+  min-height: 180px;
+  min-width: 360px;
+  padding: 10px 10px 10px 10px;
+}
+
+.tileTitle {
+  text-align: center;
+}
+
+
+.sectionTitle {
+  text-align: center;
+}
+
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#000000;
+  height: 1px;
 }
