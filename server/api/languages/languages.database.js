@@ -5,12 +5,11 @@ exports.insert= function (record){
   mongoClient.connect(url, function(err, db){
     if(err) { return console.dir(err); }
 
-      db.collection('Jobs', function(err, collection){
+      db.collection('Languages', function(err, collection){
         if(err) { return console.dir(err); }
 
           collection.insert(record, function(err, inserted){
             if(err) { return console.dir(err); }
-
           });
       });
   });
@@ -20,13 +19,13 @@ exports.get = function (callback){
   mongoClient.connect(url, function(err, db){
     if(err) { return console.dir(err); }
 
-      db.collection('Jobs', function(err, collection){
+      db.collection('Languages', function(err, collection){
         if(err) { return console.dir(err); }
 
           collection.find().toArray(function(err, items){
             if(err) { return console.dir(err); }
               callback(items);
-          });
       });
+    });
   });
 }
