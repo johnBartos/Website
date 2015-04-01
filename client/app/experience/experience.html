@@ -33,7 +33,7 @@
 <div class = "container">
   <div class="row">
     <div ng-repeat="lang in languages">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class = "panel panel-default">
           <div class = "panel-heading">
             <h3 class = "panel-title"> {{lang.Name}} </h3>
@@ -50,4 +50,21 @@
 <div class = "container">
   <h1>Technologies</h1>
   <hr>
+</div>
+
+<div class = "container">
+  <div class="row">
+    <div ng-repeat="tech in technologies">
+      <div class="col-md-3">
+        <div class = "panel panel-default">
+          <div class = "panel-heading">
+            <h3 class = "panel-title"> {{tech.Name}} </h3>
+          </div>
+          <div class = "panel-body">
+            <p> {{tech.Skill}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
