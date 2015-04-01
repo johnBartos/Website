@@ -5,19 +5,10 @@
   padding: 10px 10px 10px 10px;
 }
 
-.tileTitle {
-  text-align: center;
-}
-
-
-.sectionTitle {
-  text-align: center;
-}
-
 .centered {
-  float: none;
-  margin: 0 auto;
+  text-align: center;
 }
+
 
 hr {
   border: 0;
