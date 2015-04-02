@@ -7,3 +7,12 @@
   background-color: #FFFFFF;
   text-align: center;
 }
+
+.footerRule {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#eee;
+  height: 1px;
+}
