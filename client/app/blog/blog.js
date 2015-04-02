@@ -4,6 +4,6 @@ angular.module('websiteApp')
   .state('blog', {
     url: '/blog',
     templateUrl: 'app/blog/blog.html',
-    controller: 'MainController'
+    controller: 'BlogController'
   });
 });
