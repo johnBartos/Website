@@ -3,7 +3,7 @@ angular.module('websiteApp')
   $stateProvider
   .state('about', {
     url: '/about',
-    templateUrl: 'app/about/about.html',
+    templateUrl: 'app/about/main.html',
     controller: 'MainController'
   });
 });
