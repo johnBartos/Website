@@ -1,12 +1,12 @@
 .navbar-default {
-  background-color: #95a5a6;
-  border-color: #bdc3c7;
+  background-color: #363b44;
+  border-color: #363b44;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #ffffff;
+  color: #bbbbbb;
 }
 .navbar-default .navbar-text {
   color: #ffffff;
@@ -15,21 +15,21 @@
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #ffffff;
+  color: #bbbbbb;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #bdc3c7;
+  color: #bbbbbb;
+  background-color: #4d5460;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #bdc3c7;
+  color: #bbbbbb;
+  background-color: #4d5460;
 }
 .navbar-default .navbar-toggle {
-  border-color: #bdc3c7;
+  border-color: #4d5460;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #bdc3c7;
+  background-color: #4d5460;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -42,7 +42,7 @@
   color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
-  color: #ffffff;
+  color: #bbbbbb;
 }
 
 @media (max-width: 767px) {
@@ -50,10 +50,34 @@
     color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
+    color: #bbbbbb;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #bdc3c7;
+    color: #bbbbbb;
+    background-color: #4d5460;
+  }
+}
+
+.stripe{
+  height:10px;
+  background-image: -webkit-linear-gradient(left,
+    green,
+    red,
+    blue);
+  background-image: -moz-linear-gradient(left,
+    green,
+    red,
+    blue);
+  background-image: -ms-linear-gradient(left,
+    green,
+    red,
+    blue);
+  background-image: linear-gradient(to right,
+    green,
+    red,
+    blue);
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
   }
 }

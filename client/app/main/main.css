@@ -24,3 +24,14 @@ main{
 .right {
   text-align: right;
 }
+
+ /* full height for demo purposes */
+.vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.banner{
+  background-color: #fff;
+}
