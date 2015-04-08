@@ -9,6 +9,9 @@
   text-align: center;
 }
 
+.bordered {
+    border: 1px solid black;
+}
 
 hr {
   border: 0;
