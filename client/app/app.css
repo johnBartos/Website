@@ -20,12 +20,12 @@
   font-style: normal;
 }
 
-html{
+/*html{
   position: relative;
   min-height: 100%;
   color:#000;
 
-}
+}*/
 
 body {
   font-family: 'FontAwesome', Fallback, sans-serif;
