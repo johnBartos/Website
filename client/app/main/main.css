@@ -1,24 +1,14 @@
-main{
-  background: #e3e3e3;
-  overflow: hidden;
-  padding-top:50px;
-  padding-bottom:50px;
-  padding-left:100px;
-  padding-right:100px;
+.centered{
+  text-align: center;
 }
 
-.hero-unit {
-  position: relative;
-  padding: 15px 15px;
-  color: #000000;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background-color: #e3e3e3;
-  margin-bottom: 50px;
+.centered > p {
+  overflow: none;
+  word-wrap:break-word;
 }
 
-.centered {
-  text-align: center;
+.icon{
+  padding:0px 0px 12px 0px;
 }
 
 .right {
@@ -50,4 +40,19 @@ hr {
   width: 100%;
   background-color:#000000;
   height: 1px;
+}
+
+a:link{
+  color: #000;
+}
+
+a:visited{
+  color: #000;
+}
+
+a:hover {
+  color: #373C45;
+}
+a:active{
+  color: #000;
 }
