@@ -23,10 +23,13 @@
 html{
   position: relative;
   min-height: 100%;
+  color:#000;
+
 }
 
 body {
   font-family: 'FontAwesome', Fallback, sans-serif;
   background-color: #FFFFFF;
   margin-bottom: 30px;
+  color:#000;
 }
