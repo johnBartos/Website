@@ -16,3 +16,18 @@
   background-color:#eee;
   height: 1px;
 }
+
+a:link{
+  color: #000;
+}
+
+a:visited{
+  color: #000;
+}
+
+a:hover {
+  color: #373C45;
+}
+a:active{
+  color: #000;
+}
