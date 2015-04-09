@@ -20,11 +20,11 @@ hr {
 }
 
 .title {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .stripe{
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
 }
 
 .panel > .panel-heading {
