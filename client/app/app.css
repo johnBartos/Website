@@ -22,7 +22,11 @@
 
 body {
   font-family: 'FontAwesome', Fallback, sans-serif;
+  color: #000;
   background-color: #FFFFFF;
   margin-bottom: 30px;
-  color:#000;
+}
+
+.navbar {
+  margin-bottom: 0;
 }
