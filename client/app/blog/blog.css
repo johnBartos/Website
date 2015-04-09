@@ -1,4 +1,38 @@
 .post {
-  background-color: #EEE;
-  padding: 25px 50px 25px 50px;
+  /*padding: 25px 25px 50px 50px;*/
+}
+
+/*.post > h2{
+
+}
+
+.post > h3{
+
+}*/
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#000000;
+  height: 1px;
+}
+
+.title {
+  text-align: center;
+}
+
+.stripe{
+  margin-bottom: 15px;
+}
+
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #4C535F;
+  color: white;
+}
+
+.panel > .panel-footer {
+  padding: 0px 0px 0px 15px;
 }
