@@ -7,6 +7,7 @@ module.exports = function(app)
     app.use('/api/languages', require('./api/languages'));
     app.use('/api/technologies', require('./api/technologies'));
     app.use('/api/posts', require('./api/posts'));
+    app.use('/api/projects', require('./api/projects'));
 
     app.route('/*')
         .get(function(req, res){

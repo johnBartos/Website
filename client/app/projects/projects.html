@@ -2,11 +2,18 @@
 <div ng-include="'components/footer/footer.html'"></div>
 
 <div class = "container">
-  <h1>Software Projects</h1>
+  <h1>Projects</h1>
   <hr>
 </div>
 
 <div class = "container">
-  <h1>Miscellaneous Projects</h1>
-  <hr>
+  <div class = "row">
+    <div ng-repeat="p in projects">
+      <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
+            <h2> {{p.Name}} </h2>
+            <p>{{p.Description}}</p>
+            <hr>
+      </div>
+    </div>
+  </div>
 </div>

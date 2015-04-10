@@ -4,6 +4,6 @@ angular.module('websiteApp')
   .state('projects', {
     url: '/projects',
     templateUrl: 'app/projects/projects.html',
-    controller: 'MainController'
+    controller: 'ProjectsController'
   });
 });
