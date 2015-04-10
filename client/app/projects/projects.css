@@ -6,3 +6,8 @@ hr {
   background-color:#000000;
   height: 1px;
 }
+
+.proj > hr {
+    background-color:#DDDDDD;
+    height: 1px;
+}

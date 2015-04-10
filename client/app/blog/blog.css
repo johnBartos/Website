@@ -2,15 +2,6 @@
   /*padding: 25px 25px 50px 50px;*/
 }
 
-/*.post > h2{
-
-}
-
-.post > h3{
-
-}*/
-
-
 
 hr {
   border: 0;
@@ -24,14 +15,6 @@ hr {
 .post > hr {
     background-color:#DDDDDD;
     height: 1px;
-}
-
-.title {
-  /*text-align: center;*/
-}
-
-.stripe{
-  /*margin-bottom: 15px;*/
 }
 
 .panel > .panel-heading {
