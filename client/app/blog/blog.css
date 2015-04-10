@@ -10,6 +10,8 @@
 
 }*/
 
+
+
 hr {
   border: 0;
   clear:both;
@@ -17,6 +19,11 @@ hr {
   width: 100%;
   background-color:#000000;
   height: 1px;
+}
+
+.post > hr {
+    background-color:#DDDDDD;
+    height: 1px;
 }
 
 .title {
