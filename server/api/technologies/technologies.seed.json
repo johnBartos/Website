@@ -1,34 +1,36 @@
-{
-  "Name": "SQL Server",
-  "Skill": "Good"
-},
+[
+  {
+    "Name": "SQL Server",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "MongoDB",
-  "Skill": "Good"
-},
+  {
+    "Name": "MongoDB",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "Express",
-  "Skill": "Good"
-},
+  {
+    "Name": "Express",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "AngularJS",
-  "Skill": "Good"
-},
+  {
+    "Name": "AngularJS",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "NodeJS",
-  "Skill": "Good"
-},
+  {
+    "Name": "NodeJS",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "HTML5",
-  "Skill": "Good"
-},
+  {
+    "Name": "HTML5",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "Microsoft .NET",
-  "Skill": "Great"
-}
+  {
+    "Name": "Microsoft .NET",
+    "Skill": "Great"
+  }
+]
