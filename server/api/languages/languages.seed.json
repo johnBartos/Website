@@ -1,20 +1,22 @@
-{
-  "Name": "C#",
-  "Skill": "Great"
+[
+  {
+    "Name": "C#",
+    "Skill": "Great"
 
-},
+  },
 
-{
-  "Name": "C++",
-  "Skill": "Ite"
-},
+  {
+    "Name": "C++",
+    "Skill": "Ite"
+  },
 
-{
-  "Name": "C",
-  "Skill": "Good"
-},
+  {
+    "Name": "C",
+    "Skill": "Good"
+  },
 
-{
-  "Name": "Javascript",
-  "Skill": "Bretty Gud"
-}
+  {
+    "Name": "Javascript",
+    "Skill": "Bretty Gud"
+  }
+]
