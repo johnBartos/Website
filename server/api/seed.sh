@@ -14,6 +14,10 @@ cd technologies
 sh technologies.import.sh
 cd ..
 
-cd projects
-sh projects.import.sh
-cd ..
+cd projects/personal
+sh personal.import.sh
+cd ../..
+
+cd projects/work
+sh work.import.sh
+cd ../..

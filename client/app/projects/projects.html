@@ -9,7 +9,19 @@
 
 <div class = "container">
   <div class = "row">
-    <div ng-repeat="p in projects">
+    <div ng-repeat="p in personal_projects">
+      <div class = "col-md-offset-2 col-md-8 proj col-md-offset-2">
+            <h2> {{p.Name}} </h2>
+            <p>{{p.Description}}</p>
+            <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class = "container">
+  <div class = "row">
+    <div ng-repeat="p in work_projects">
       <div class = "col-md-offset-2 col-md-8 proj col-md-offset-2">
             <h2> {{p.Name}} </h2>
             <p>{{p.Description}}</p>
