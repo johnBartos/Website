@@ -10,11 +10,11 @@ angular.module('websiteApp')
       $scope.jobs = jobs;
   });
 
-  $http.get('/api/languages').success(function(languages){
-    $scope.languages = languages;
-  });
-
-  $http.get('/api/technologies').success(function(technologies){
-    $scope.technologies = technologies;
-  });
+  // $http.get('/api/languages').success(function(languages){
+  //   $scope.languages = languages;
+  // });
+  //
+  // $http.get('/api/technologies').success(function(technologies){
+  //   $scope.technologies = technologies;
+  // });
 });
