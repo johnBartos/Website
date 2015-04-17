@@ -22,6 +22,11 @@ hr {
   height: 1px;
 }
 
+.job > hr {
+  background-color:#DDDDDD;
+  height: 1px;
+}
+
 .panel > .panel-heading {
   background-image: none;
   background-color: #4C535F;
