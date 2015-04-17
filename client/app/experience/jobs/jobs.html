@@ -1,0 +1,15 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div ng-include="'components/footer/footer.html'"></div>
+<link rel="stylesheet" type="text/css" href="app/experience/jobs/jobs.css" />
+
+<div class = "container">
+  <div class = "row">
+    <div ng-repeat="p in projects">
+      <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
+            <h2> {{p.Name}} </h2>
+            <p>{{p.Description}}</p>
+            <hr>
+      </div>
+    </div>
+  </div>
+</div>
