@@ -1,35 +1,42 @@
 [
   {
+    "jobId": "dataonline",
     "Name": "SQL Server",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "MongoDB",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "Express",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "AngularJS",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "NodeJS",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "HTML5",
     "Skill": "Good"
   },
 
   {
+    "jobId": ["dataonline", "rutgers"],
     "Name": "Microsoft .NET",
     "Skill": "Great"
   }
