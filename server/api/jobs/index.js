@@ -16,4 +16,5 @@ router.use('/technologies', technologies);
 router.get('/', controller.get_all);
 router.get('/:jobId', controller.get_one);
 
+
 module.exports = router;

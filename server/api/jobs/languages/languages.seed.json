@@ -1,21 +1,25 @@
 [
   {
+    "jobId": ["dataonline", "rutgers"],
     "Name": "C#",
     "Skill": "Great"
 
   },
 
   {
+    "jobId": "dataonline",
     "Name": "C++",
     "Skill": "Ite"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "C",
     "Skill": "Good"
   },
 
   {
+    "jobId": "dataonline",
     "Name": "Javascript",
     "Skill": "Bretty Gud"
   }
