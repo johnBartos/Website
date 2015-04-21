@@ -5,7 +5,7 @@ exports.get = function (jobId, callback){
   mongoClient.connect(url, function(err, db){
     if(err) { return console.dir(err); }
 
-      db.collection('Projects', function(err, collection){
+      db.collection('Works', function(err, collection){
         if(err) { return console.dir(err); }
 
           collection.find({jobId: jobId}).toArray(function(err, items){
