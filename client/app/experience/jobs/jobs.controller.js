@@ -17,9 +17,9 @@ angular.module('websiteApp')
     $scope.languages = languages;
   });
 
-  $http.get('/api/jobs/projects/' + $stateParams.jobId).success(function(projects){
-    console.log("Getting projects for " + $stateParams.jobId);
-    $scope.projects = projects;
+  $http.get('/api/jobs/works/' + $stateParams.jobId).success(function(works){
+    console.log("Getting works for " + $stateParams.jobId);
+    $scope.works = works;
   });
 
   $http.get('/api/jobs/technologies/' + $stateParams.jobId).success(function(technologies){

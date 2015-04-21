@@ -1,8 +1,8 @@
 'use strict'
-var db = require('./projects.database');
+var db = require('./works.database');
 
 exports.get = function(req, res){
-  console.log("Getting Projects: " + req.params.jobId);
+  console.log("Getting Works: " + req.params.jobId);
   db.get(req.params.jobId, function(rec){
     res.json(rec);
   });

@@ -4,13 +4,13 @@ var express = require('express');
 var controller = require('./jobs.controller');
 
 var languages = require('./languages');
-var projects = require('./projects');
+var projects = require('./works');
 var technologies = require('./technologies');
 
 var router = express.Router();
 
 router.use('/languages', languages);
-router.use('/projects', projects);
+router.use('/works', projects);
 router.use('/technologies', technologies);
 
 router.get('/', controller.get_all);

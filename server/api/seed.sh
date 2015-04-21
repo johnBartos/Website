@@ -9,8 +9,8 @@ cd languages
 sh languages.import.sh
 cd ..
 
-cd projects
-sh projects.import.sh
+cd works
+sh works.import.sh
 cd ..
 
 cd technologies
@@ -19,6 +19,6 @@ cd ..
 
 cd ..
 
-# cd projects
-# sh projects.import.sh
-# cd ..
+cd projects
+sh projects.import.sh
+cd ..
