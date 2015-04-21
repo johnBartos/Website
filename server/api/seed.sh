@@ -19,6 +19,6 @@ cd ..
 
 cd ..
 
-cd projects
-sh projects.import.sh
-cd ..
+# cd projects
+# sh projects.import.sh
+# cd ..
