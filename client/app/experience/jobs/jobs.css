@@ -7,8 +7,42 @@ hr {
   height: 1px;
 }
 
+.panel{
+  /*border-top: 0px solid black;
+  border-bottom: 1px solid black;
+  border-left: 0px solid black;
+  border-right: 0px solid black;*/
+
+  border: 0px solid black;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  background-color:#ECECEC;
+}
+
 .panel > .panel-heading {
   background-image: none;
-  background-color: #4C535F;
-  color: white;
+  /*background-color: #4C535F;*/
+  background-color:#ECECEC;
+  color: #000;
+  text-align:center;
+  border-bottom: 0px solid black;
+
+}
+
+
+
+
+/*.tile{
+  max-width: 200px;
+  max-height: 200px;
+  overflow-y:hidden;
+}*/
+
+.centered{
+  text-align:center;
 }
