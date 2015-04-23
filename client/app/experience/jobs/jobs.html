@@ -24,10 +24,12 @@
   <div class="row">
     <div ng-repeat="w in works">
       <!-- <div ng-class-odd="'col-md-offset-1 col-md-5'" ng-class-even="'col-md-5'"> -->
-      <div class = "col-md-4">
+      <div class = "col-md-3">
         <div class = "panel panel-default tile">
           <div class = "panel-heading">
-            <h3 class = "panel-title"> {{w.Name}} </h3>
+            <div class = "panel-title">
+              <h4> {{w.Name}} </h4>
+            </div>
           </div>
           <div class = "panel-body">
             <p> {{w.Description}} </p>
@@ -46,10 +48,12 @@
 <div class = "container">
   <div class="row">
     <div ng-repeat="t in technologies">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class = "panel panel-default">
           <div class = "panel-heading">
-            <h3 class = "panel-title"> {{t.Name}} </h3>
+            <div class = "panel-title">
+               <h5>{{t.Name}} </h5>
+             </div>
           </div>
           <div class = "panel-body">
             <p> {{t.Skill}} </p>
@@ -69,10 +73,12 @@
 <div class = "container">
   <div class="row">
     <div ng-repeat="l in languages">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class = "panel panel-default">
           <div class = "panel-heading">
-            <h3 class = "panel-title"> {{l.Name}} </h3>
+            <div class = "panel-title">
+              <h5>{{l.Name}} </h5>
+            </div>
           </div>
           <div class = "panel-body">
             <p> {{l.Skill}} </p>
