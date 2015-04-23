@@ -26,7 +26,9 @@ hr {
   -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
 
-  background-color:#FFF;
+  background-color:#DDD;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 
 }
 
@@ -36,8 +38,8 @@ hr {
   background-color:#FFF;
   color: #000;
   text-align:center;
-  margin-left: 15%;
-  margin-right: 15%;
+  /*margin-left: 10%;
+  margin-right: 10%;*/
   /*border-radius: 0 !important;*/
   /*border-bottom: 1px solid black;*/
   /*box-shadow: 0 2px 1px -1px gray;*/
@@ -61,8 +63,10 @@ hr {
 
 .panel > .panel-body{
   border: 1px;
-  padding-left: 5%;
-  padding-right: 5%;
+  /*margin-left: 10%;
+  margin-right: 10%;*/
+  background-color:#FFF;
+
 }
 
 .centered{
