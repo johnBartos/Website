@@ -40,7 +40,7 @@ hr {
 
 .panel:hover{
   background-color:#363b44;
-  transition: background-color 200ms linear;
+  transition: background-color 250ms linear;
 }
 
 .centered{
