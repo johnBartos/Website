@@ -9,10 +9,6 @@ hr {
 
 .panel{
   border: 1px solid black;
-  /*-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);*/
-
   background-color:#DDD;
   padding-left: 6.5px;
   padding-right: 6.5px;
@@ -35,13 +31,16 @@ hr {
 }
 
 
-
 .panel > .panel-body{
   border: 1px;
-  /*margin-left: 10%;
-  margin-right: 10%;*/
+
   background-color:#FFF;
 
+}
+
+.panel:hover{
+  background-color:#363b44;
+  transition: background-color 200ms linear;
 }
 
 .centered{
