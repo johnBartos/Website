@@ -5,12 +5,20 @@
 
 <div class = "container">
   <div class = "row">
-    <div class = "container">
+    <div class = "col-md-12">
       <h1>{{job.Name}}</h1>
-      <hr>
-      <h4 class = "text-muted"> {{job.Date}}, {{job.Location}} </h4>
-      <h4 class = "text-muted"> {{job.Position}} </h4>
-      <p> {{job.Description}} </p>
+      <hr class = "title">
+      <div class = "container information">
+        <h4 class = "text-muted"> {{job.Date}}, {{job.Location}}  <br> {{job.Position}} </h4>
+        <!-- <h4 class = "text-muted"> </h4> -->
+      </div>
+      <div class = "container overview">
+        <ul class="list-unstyled icon-list chevron-right">
+          <li> <div class = "descriptor">Company Description</div> <p> {{job.Description}} </p> </li>
+          <li> <div class = "descriptor">Development Environment</div>{{job.Environment}} </p> </li>
+          <li class = "last"> <div class = "descriptor">Work Responsibilities</div>{{job.Responsibilities}} </p> </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -23,7 +31,6 @@
 <div class = "container">
   <div class="row">
     <div ng-repeat="w in works">
-      <!-- <div ng-class-odd="'col-md-offset-1 col-md-5'" ng-class-even="'col-md-5'"> -->
       <div class = "col-md-3">
         <div class = "panel panel-default tile data-trigger="hover"">
           <div class = "panel-heading">
