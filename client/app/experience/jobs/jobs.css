@@ -7,6 +7,10 @@ hr {
   height: 1px;
 }
 
+.title > hr {
+  margin: 0px;
+}
+
 .panel{
   border: 1px solid black;
   background-color:#DDD;
@@ -40,9 +44,45 @@ hr {
 
 .panel:hover{
   background-color:#363b44;
-  transition: background-color 250ms linear;
+  transition: background-color 500ms ease;
 }
 
 .centered{
   text-align:center;
+}
+
+.icon-list li {
+  padding: 0 0 20px 20px;
+  display: block;
+  position: relative;
+}
+
+.icon-list li:before {
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  left: 0px;
+  top:3px;
+  font-size:80%
+}
+.chevron-right li:before {
+  content:"\e254";
+}
+
+.information{
+  margin: 0px;
+  padding: 0px;
+}
+
+.overview{
+  margin: 0px;
+  padding: 0px;
+}
+
+.descriptor{
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.last {
+  padding-bottom: 0px;
 }
