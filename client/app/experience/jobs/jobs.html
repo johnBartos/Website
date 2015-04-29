@@ -12,7 +12,7 @@
         <h5 class = "text-muted"> {{job.Date}}, {{job.Location}} <br> {{job.Position}} </h5>
       </div>
       <div class = "col-md-12 summary">
-        <ul class="list-unstyled icon-list chevron-right">
+        <ul class="list-unstyled icon-list bullet">
           <li> <div class = "descriptor">Description</div> <p> {{job.Description}} </p> </li>
           <li> <div class = "descriptor">Environment</div>{{job.Environment}} </p> </li>
           <li class = "last"> <div class = "descriptor">Responsibilities</div>{{job.Responsibilities}} </p> </li>
@@ -31,10 +31,11 @@
   </div>
 </div>
 
+<!-- There has to be a better way to do this -->
 <div class = "container">
   <div class="row">
     <div ng-repeat="w in works">
-      <div class = "col-md-3">
+      <div class = "col-md-4">
         <div class = "panel panel-default tile data-trigger="hover"">
           <div class = "panel-heading">
             <div class = "panel-title">
@@ -42,8 +43,53 @@
             </div>
           </div>
           <div class = "panel-body">
-            <p> {{w.Description}} </p>
-          </div>
+
+            <div class = "col-md-12">
+              <div class = "descriptor">Problem</div>
+              <ul class="list-unstyled icon-list bullet-subitem">
+                <div ng-repeat="p in w.Problem">
+                  <li> {{p}} </li>
+                </div>
+              </ul>
+            </div>
+
+            <div class = "col-md-12">
+              <div class = "descriptor">Solution</div>
+              <ul class="list-unstyled icon-list bullet-subitem">
+                <div ng-repeat="s in w.Solution">
+                  <li> {{s}} </li>
+                </div>
+              </ul>
+            </div>
+
+            <!-- <div class = "col-md-12">
+              <div class = "descriptor">Implementation</div>
+              <ul class="list-unstyled icon-list bullet-subitem">
+                <div ng-repeat="i in w.Implementation">
+                  <li> {{i}} </li>
+                </div>
+              </ul>
+            </div>
+
+            <div class = "col-md-12">
+              <div class = "descriptor">Practices</div>
+              <ul class="list-unstyled icon-list bullet-subitem">
+                <div ng-repeat="p in w.Practices">
+                  <li> {{p}} </li>
+                </div>
+              </ul>
+            </div> -->
+
+            <div class = "col-md-12">
+              <div class = "descriptor">Result</div>
+              <ul class="list-unstyled icon-list bullet-subitem">
+                <div ng-repeat="r in w.Result">
+                  <li> {{r}} </li>
+                </div>
+              </ul>
+            </div>
+
+        </div>
         </div>
       </div>
     </div>

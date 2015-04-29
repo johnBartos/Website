@@ -24,6 +24,7 @@
 
 .banner{
   background-color: #fff;
+  margin-bottom: 0px;
 }
 
 .noWhitespace{
@@ -39,7 +40,7 @@ hr {
   display:block;
   width: 100%;
   background-color:#000000;
-  height: 1px;
+  height: 2px;
 }
 
 a:link{
