@@ -5,18 +5,17 @@
 
 <div class = "container">
   <div class = "row">
-    <div class = "col-md-12">
+    <div class = "col-md-12 overview">
       <h1>{{job.Name}}</h1>
       <hr class = "title">
-      <div class = "container information">
-        <h4 class = "text-muted"> {{job.Date}}, {{job.Location}}  <br> {{job.Position}} </h4>
-        <!-- <h4 class = "text-muted"> </h4> -->
+      <div class = "col-md-12 information">
+        <h5 class = "text-muted"> {{job.Date}}, {{job.Location}} <br> {{job.Position}} </h5>
       </div>
-      <div class = "container overview">
+      <div class = "col-md-12 summary">
         <ul class="list-unstyled icon-list chevron-right">
-          <li> <div class = "descriptor">Company Description</div> <p> {{job.Description}} </p> </li>
-          <li> <div class = "descriptor">Development Environment</div>{{job.Environment}} </p> </li>
-          <li class = "last"> <div class = "descriptor">Work Responsibilities</div>{{job.Responsibilities}} </p> </li>
+          <li> <div class = "descriptor">Description</div> <p> {{job.Description}} </p> </li>
+          <li> <div class = "descriptor">Environment</div>{{job.Environment}} </p> </li>
+          <li class = "last"> <div class = "descriptor">Responsibilities</div>{{job.Responsibilities}} </p> </li>
         </ul>
       </div>
     </div>
@@ -24,8 +23,12 @@
 </div>
 
 <div class = "container">
-  <h1>Work</h1>
-  <hr>
+  <div class = "row">
+    <div class = "col-md-12">
+      <h1>Work</h1>
+      <hr>
+    </div>
+  </div>
 </div>
 
 <div class = "container">
@@ -48,8 +51,12 @@
 </div>
 
 <div class = "container">
-  <h1>Technologies</h1>
-  <hr>
+  <div class = "row">
+    <div class = "col-md-12">
+      <h1>Technologies</h1>
+      <hr>
+    </div>
+  </div>
 </div>
 
 <div class = "container">
@@ -73,8 +80,12 @@
 
 
 <div class = "container">
-  <h1>Languages</h1>
-  <hr>
+  <div class = "row">
+    <div class = "col-md-12">
+      <h1>Languages</h1>
+      <hr>
+    </div>
+  </div>
 </div>
 
 <div class = "container">
