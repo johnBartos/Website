@@ -2,8 +2,10 @@
 .panel{
   border: 1px solid black;
   background-color:#DDD;
-  padding-left: 3.25px;
-  padding-right: 3.25px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
   transition: background-color 250ms ease;
 }
 
@@ -24,9 +26,12 @@
 }
 
 .panel > .panel-body{
-  border: 1px;
-
+  /*border: 1px solid #FFF;*/
+  background-image: none;
   background-color:#FFF;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 
 }
 
@@ -54,8 +59,7 @@
 }
 
 .bullet-subitem li:before{
-  content:"\e254";
-}
+  content:"\e080";  }
 
 /*General*/
 hr {
