@@ -63,21 +63,21 @@
 .stripe{
   height:10px;
   background-image: -webkit-linear-gradient(left,
-    green,
-    red,
-    blue);
+    #00B16A,
+    #D64541,
+    #19B5FE);
   background-image: -moz-linear-gradient(left,
-    green,
-    red,
-    blue);
+    #00B16A,
+    #D64541,
+    #19B5FE);
   background-image: -ms-linear-gradient(left,
-    green,
-    red,
-    blue);
+    #00B16A,
+    #D64541,
+    #19B5FE);
   background-image: linear-gradient(to right,
-    green,
-    red,
-    blue);
+    #00B16A,
+    #D64541,
+    #19B5FE);
   background-size: 100%;
   background-position: 50% 100%;
   background-repeat: no-repeat;
