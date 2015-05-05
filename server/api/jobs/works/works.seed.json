@@ -2,25 +2,62 @@
   {
     "jobId": ["dataonline"],
     "Name": "Packet Counter Service",
-    "Problem": ["Counting carrier packets on the Dolv3 web client created excessive database load, leading to slow page load time and reduced database performance"],
-    "Solution":["Creation of microservice to perform packet counting in memory and store the count in the database"],
-    "Implementation":["The service continually reads the packet message queue into hash table.", "The service periodically counts packets and writes the total count per carrier to database", "The service flushes out packets that are too old to be relevant in counts"],
-    "Practices":["Utilized several design patterns, including factories, interfaces, templates, and dependency injection", "SOLID design principles to promote code reuse and reduce repetition", "Equipped with extensive logging and unit tests" ],
+    "Problem": "Counting carrier packets on the Dolv3 web client created excessive database load, leading to slow page load time and reduced database performance",
+    "Solution":"Creation of microservice to perform packet counting in memory and store the count in the database",
     "Result": ["Packet count webpage load time decreased from 30 seconds to under one second", "Eliminated over 2 million database operations per page instance per minute, significantly reducing database strain leading to system-wide performance increases", "Improved code quality by moving business logic out of the user interface and database" ]
   },
+
   {
-    "jobId": ["dataonline", "rutgers"],
-    "Name": "Work Project 2",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "jobId": ["dataonline"],
+    "Name": "",
+    "Problem": "",
+    "Solution":"",
+    "Result": ["", "", "" ]
   },
+
   {
-    "jobId": ["dataonline", "rutgers"],
-    "Name": "Work Project 3",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "jobId": ["dataonline"],
+    "Name": "HTML5 Pilot Project",
+    "Problem": "Our current website, Dolv3, is running on the Silverlight platform. Silverlight will be discontinued by major web browsers in the near future, requiring us to build a replacement",
+    "Solution":"Development of prototype website utilizing modern web technologies. We decided to use the MEAN stack supplemented by Windows microservices",
+    "Result": ["Improved load time of corresponding pages from 4 seconds to under 300 milliseconds",
+      "Enhanced user experience though modernization of user interface",
+      "Produced quality code in line with current best practices, encouraging code readability, reuse, and extensibility",
+      "Validated code correctness through array of unit and integration tests",
+      "Established continuous integration environment to build and test code upon pull requests" ]
   },
+
   {
-    "jobId": ["dataonline", "rutgers"],
-    "Name": "Work Project 4",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-  }
+    "jobId": ["dataonline"],
+    "Name": "Token Authentication Service",
+    "Problem": "Users on the prototype replacement for Dolv3 require secure authentication to access the site",
+    "Solution":"Development of token-based authentication microservice using ASP.NET WebAPI and MongoDB",
+    "Result": ["Improved security over basic authentication by negating the need to send user credentials through the request header",
+       "Achieved authentication request time of approximately 60 milliseconds",
+       "Provided automatic token invalidation through time and IP based checks",
+       "Facilitated customization of token rules through minimal and complete interface",
+       "Designed basic safeguards to mitigate malicious logins by counting failed attempts"]
+  },
+
+  {
+    "jobId": ["dataonline"],
+    "Name": "User Data Service",
+    "Problem": "User information stored in SQL servers must be made available to several parts of our prototype website",
+    "Solution":"Development of REST microservice to allow others services to request information about specific users",
+    "Result": ["Allowed services to retrieve user data without making SQL calls",
+      "Enabled system to serve data only belonging to that user, ensuring data privacy"]
+  },
+
+  {
+    "jobId": ["dataonline"],
+    "Name": "Asset Summary Service",
+    "Problem": "Entire asset summary is periodically being cached into MongoDB from SQL, but services only require specific parts of result set",
+    "Solution":"Development of microservice to read through stored asset summary and retrieve records correlated with the given identification key",
+    "Result": ["Reduced data retrieval time of 2200 records from approximately 4 seconds to under 400 milliseconds compared to Silverlight system",
+      "Prevented unauthorized access to microservices by only publicizing routes needed by the client",
+      "Enhanced logging features through centralization of server traffic",
+      "Allowed prototype application to operate over a single firewall port, improving system security",
+      "Provided functionality to combine REST calls into a single route, allowing the client to do less work"]
+  },
+
 ]
