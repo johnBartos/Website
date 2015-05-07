@@ -4,15 +4,9 @@
     "Name": "Packet Counter Service",
     "Problem": "Counting carrier packets on the Dolv3 web client created excessive database load, leading to slow page load time and reduced database performance",
     "Solution":"Creation of microservice to perform packet counting in memory and store the count in the database",
-    "Result": ["Packet count webpage load time decreased from 30 seconds to under one second", "Eliminated over 2 million database operations per page instance per minute, significantly reducing database strain leading to system-wide performance increases", "Improved code quality by moving business logic out of the user interface and database" ]
-  },
-
-  {
-    "jobId": ["dataonline"],
-    "Name": "",
-    "Problem": "",
-    "Solution":"",
-    "Result": ["", "", "" ]
+    "Result": ["Packet count webpage load time decreased from 30 seconds to under one second",
+       "Eliminated over 3 million database operations per page instance per minute, significantly reducing database strain leading to system-wide performance increases",
+        "Improved code quality by moving business logic out of the user interface and database" ]
   },
 
   {
@@ -54,10 +48,79 @@
     "Problem": "Entire asset summary is periodically being cached into MongoDB from SQL, but services only require specific parts of result set",
     "Solution":"Development of microservice to read through stored asset summary and retrieve records correlated with the given identification key",
     "Result": ["Reduced data retrieval time of 2200 records from approximately 4 seconds to under 400 milliseconds compared to Silverlight system",
-      "Prevented unauthorized access to microservices by only publicizing routes needed by the client",
+      "Improved load time of user interface by serving preformatted data"]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "DOL Rest Service",
+    "Problem": "Having several server-side microservices on different routes complicates REST calls from the client",
+    "Solution":"Development of microservice which encapsulates server-side services and exposes a single interface  ",
+    "Result": ["Simplified creation of REST calls to the backend through a coherent interface, leading to simpler and more consistent code",
+      "Prevented unauthorized access to microservices by only publicizing routes needed by the client ",
       "Enhanced logging features through centralization of server traffic",
       "Allowed prototype application to operate over a single firewall port, improving system security",
-      "Provided functionality to combine REST calls into a single route, allowing the client to do less work"]
+      "Provided functionality to combine REST calls into a single route, reducing the amount of work performed on the client"]
   },
-
+  {
+    "jobId": ["dataonline"],
+    "Name": "Mongo Access Layer",
+    "Problem": "Services require an abstraction through which to interact with MongoDB",
+    "Solution":"Development of data access layer allowing services to perform CRUD operations with their business objects",
+    "Result": ["Reduced coupling with the database by separating implementation of the database from business logic",
+      "Promoted code reusability by engineering solution with generic type arguments",
+      "Enabled modification of database operations without impacting the business logic code",
+      "Bolstered functionality of CRUD operations by supporting LINQ queries in function arguments"]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "Baidu Maps",
+    "Problem": "Customers in China are unable to access our Google Maps application due to government restrictions",
+    "Solution":"Development of Baidu Maps clone of our Google Maps application",
+    "Result": ["Achieved core functionality on the Baidu platform, enabling blocked customers utilize our mapping data",
+      "Cleaned up code before writing new features, reducing pollution of the global namespace, improving readability, reliability and performance",
+      "Organized mapping code into duck-typed interface, accommodating Baidu without needing to rewrite underlying business logic" ]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "WiX Installer",
+    "Problem": "Windows Installer, our current installation method, is incompatible with services created in Visual Studio 2013",
+    "Solution":"Development and documentation of WiX Installer construction process",
+    "Result": ["Produced a highly customizable WiX installer compatible with our existing build and deployment process",
+      "Documented the creation process, enabling team members to create their own installers",
+      "Programmed custom XML transform to remove duplicates from WiX's file harvest, eliminating compiler errors caused by its use"]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "IIS Publish Script",
+    "Problem": "Current method of publishing IIS packages by hand is tedious and error-prone",
+    "Solution":"Development of PowerShell script for automating publish package deployment",
+    "Result": ["Overcame obstacles hindering previous developers tasked with this problem",
+      "Furthererd automation of deployment process, reducing the chance of user error"]
+    }
+  {
+    "jobId": ["dataonline"],
+    "Name": "Build Script Overhaul",
+    "Problem": "Build script updates require a manual push to the build machine to take effect",
+    "Solution":"Development of PowerShell script which is able to execute build scripts included in repository clones",
+    "Result": ["Eliminated need for developers to manually update the builder when a new solution is added",
+      "Boosted flexibility of build process by allowing custom builds to be run without any machine changes",
+      "Reduced amount of code needed by build machines" ]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "Automated Billing",
+    "Problem": "Processing of billing records is executed by hand with an outdated Visual Basic script",
+    "Solution":"Development of Windows Service to process billing records ",
+    "Result": ["Significantly reduced amount of time spent to process billing records",
+      "Constructed PowerShell script to invoke billing service as a scheduled task, ensuring billing records are always up to date"]
+    },
+    {
+      "jobId": ["dataonline"],
+      "Name": "Helium ISO Design Curve",
+      "Problem": "Customers viewing a pressure graph of their helium ISO container need to know how their tank is performing",
+      "Solution":"Development of data visualization graph displaying the expected behavior of a tank",
+      "Result": ["Reverse-engineered equations from graphs provided by tank manufacturers, resulting in an accurate data visualization",
+        "Designed user interface features for efficiently configuring equation parameters",
+        "Demonstrated by company owners at ITCO 2015" ]
+    }
 ]
