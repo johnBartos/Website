@@ -7,6 +7,13 @@ angular.module('websiteApp')
   $scope.languages = [];
   $scope.technologies = [];
 
+  setTimeout( function() {
+    $(".masonry-container").masonry({
+        itemSelector: ".item",
+        columnWidth: ".item"
+    });
+  }, 200);
+
   $http.get('/api/jobs/' + $stateParams.jobId).success(function(job){
     console.log("Getting job: " + $stateParams.jobId);
     $scope.job = job[0];
