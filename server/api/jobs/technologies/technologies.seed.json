@@ -1,12 +1,6 @@
 [
   {
     "jobId": "dataonline",
-    "Name": "SQL Server",
-    "Skill": "Good"
-  },
-
-  {
-    "jobId": "dataonline",
     "Name": "MongoDB",
     "Skill": "Good"
   },
@@ -31,7 +25,31 @@
 
   {
     "jobId": "dataonline",
-    "Name": "HTML5",
+    "Name": "Bootstrap",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "JQuery",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "Visual Studio",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "SQLServer",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "ASP.NET",
     "Skill": "Good"
   },
 
@@ -39,5 +57,11 @@
     "jobId": ["dataonline", "rutgers"],
     "Name": "Microsoft .NET",
     "Skill": "Great"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "Git",
+    "Skill": "Good"
   }
 ]

@@ -1,0 +1,12 @@
+.frame{
+  text-align:center;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#000000;
+  height: 1px;
+}

@@ -1,14 +1,17 @@
 [
   {
       "Name": "This Website",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "Description": "A simple website created with the MEAN stack. I approached this project primarily as a learning exercise, which meant making some unconveinent choices. I chose to use 'Pure' implementations of technologies, so that meant pure JavaScript, HTML, and CSS. Scaffolding is cheating, so Yeoman was out (although I was inspired by the directory structure of Angular-Fullstack). While still not fully complete, I'm very happy with the results. I've learned a great deal, and feel much more confident doing web development.",
+      "Link": "https://github.com/johnBartos/Website"
   },
   {
     "Name": "Descending Particles",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "Description": "A small game I made to learn Python. I've always been fascinated by graphics processing, so I decided to emulate a classic game, Falling Sands. I bit off a bit more than I could chew, really, but it was a fun project. And now I'm fully qualified to complain about how slow Python is compared to C++.",
+    "Link": "https://github.com/johnBartos/DescendingParticles"
   },
   {
     "Name": "3D Priting",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "Description": "I've always wanted to get into 3D printing since my trip to MakerFaire in 2013, but it was prohibitively expensive to my then-college self. But one day I got a job. A few more days after that I bought a RepRap. A Prusa i3v 8, to be exact. I even built it myself! It's a wonderful hobby for somebody who has way too much time on their hands; I'd sunk hundreds of hours into it before I got it printing nicely. But it's an extremely rewarding hobby which allows me to work with my hands (and not just fingertips). And I'm the envy of the office with my collection of little trinkets.",
+    "Link":""
   }
 ]
