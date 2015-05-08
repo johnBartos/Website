@@ -18,11 +18,7 @@ angular.module('websiteApp')
   {
     'title' : 'Resume',
     'link' : '/resume'
-  }//,
-  // {
-  //   'title' : 'About',
-  //   'link' : '/about'
-  // }
+  }
   ];
 
   $scope.isCollapsed = true;
