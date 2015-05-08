@@ -7,12 +7,7 @@ angular.module('websiteApp')
   $scope.languages = [];
   $scope.technologies = [];
 
-  setTimeout( function() {
-    $(".masonry-container").masonry({
-        itemSelector: ".item",
-        columnWidth: ".item"
-    });
-  }, 200);
+
 
   $http.get('/api/jobs/' + $stateParams.jobId).success(function(job){
     console.log("Getting job: " + $stateParams.jobId);
@@ -27,6 +22,14 @@ angular.module('websiteApp')
   $http.get('/api/jobs/works/' + $stateParams.jobId).success(function(works){
     console.log("Getting works for " + $stateParams.jobId);
     $scope.works = works;
+
+    // Hack for getting Masonry to work
+    setTimeout( function() {
+      $(".masonry-container").masonry({
+          itemSelector: ".item",
+          columnWidth: ".item"
+      });
+    }, 200);
   });
 
   $http.get('/api/jobs/technologies/' + $stateParams.jobId).success(function(technologies){
