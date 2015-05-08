@@ -20,7 +20,49 @@
 
   {
     "jobId": "dataonline",
-    "Name": "Javascript",
-    "Skill": "Bretty Gud"
+    "Name": "JavaScript",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "HTML5",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "CSS3",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "Python",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "PowerShell",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "Bash",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "SQL",
+    "Skill": "Good"
+  },
+
+  {
+    "jobId": "dataonline",
+    "Name": "XML",
+    "Skill": "Good"
   }
 ]

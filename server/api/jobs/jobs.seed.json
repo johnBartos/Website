@@ -9,13 +9,3 @@
     "Environment": "The bulk of work is done using C# with the .NET framework within the Windows ecosystem. We use Silverlight for presentation, IIS for our web server, and SQLServer for our database operations. We perform nightly builds on a cluster of Azure servers and deploy using custom Powershell scripts. However, we occasionally work outside of the Windows sphere. We currently have a pilot project to create a RESTful replacement to Dolv3 using the MEAN stack. ",
     "Responsibilities": "As a member of the small software development team at DataOnline, I am responsible for maintaining and developing applications for our software services, mainly Dolv3. The constraints of a small team have me working on the full range of our software stack. My responsibilities often go beyond writing software into design, specs, and architecture. While too long to list here, I have detailed each of the projects I’ve worked on below. Additionally, I frequently meet with company owners and management in order to present current work and design new features. I have been consistently recognized as one who is able to quickly learn new technologies and apply them to our development process."
   },
-
-  {
-    "jobId": "rutgers",
-    "Name": "Rutgers, the State University of New Jersey",
-    "Date": "May 2013-May 2014",
-    "Location": "Piscataway, NJ",
-    "Position": "Junior Researcher",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  }
-]

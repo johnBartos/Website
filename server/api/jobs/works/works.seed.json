@@ -96,7 +96,7 @@
     "Solution":"Development of PowerShell script for automating publish package deployment",
     "Result": ["Overcame obstacles hindering previous developers tasked with this problem",
       "Furthererd automation of deployment process, reducing the chance of user error"]
-    }
+  },
   {
     "jobId": ["dataonline"],
     "Name": "Build Script Overhaul",
