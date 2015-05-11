@@ -33,5 +33,11 @@ angular.module('websiteApp')
   $http.get('/api/jobs/technologies/' + $stateParams.jobId).success(function(technologies){
     console.log("Getting technologies for " + $stateParams.jobId);
     $scope.technologies = technologies;
-  });
+  })
+  .directive('clickExpand', function(){
+    return{
+      restrict: 'A',
+      scope: true
+    }
+  })
 });

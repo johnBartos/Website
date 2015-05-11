@@ -28,7 +28,7 @@ define([
 	function computePixelPositionAndBoxSizingReliable() {
 		div.style.cssText =
 			// Support: Firefox<29, Android 2.3
-			// bower_components-prefix box-sizing
+			// Vendor-prefix box-sizing
 			"-webkit-box-sizing:border-box;-moz-box-sizing:border-box;" +
 			"box-sizing:border-box;display:block;margin-top:1%;top:1%;" +
 			"border:1px;padding:1px;width:4px;position:absolute";
@@ -73,7 +73,7 @@ define([
 				// Reset CSS: box-sizing; display; margin; border; padding
 				marginDiv.style.cssText = div.style.cssText =
 					// Support: Firefox<29, Android 2.3
-					// bower_components-prefix box-sizing
+					// Vendor-prefix box-sizing
 					"-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
 					"box-sizing:content-box;display:block;margin:0;border:0;padding:0";
 				marginDiv.style.marginRight = marginDiv.style.width = "0";
