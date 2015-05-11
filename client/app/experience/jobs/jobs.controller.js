@@ -7,8 +7,6 @@ angular.module('websiteApp')
   $scope.languages = [];
   $scope.technologies = [];
 
-
-
   $http.get('/api/jobs/' + $stateParams.jobId).success(function(job){
     console.log("Getting job: " + $stateParams.jobId);
     $scope.job = job[0];
