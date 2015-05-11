@@ -2,21 +2,31 @@
   "name": "MEAN",
   "version": "0.0.0",
   "authors": [
-    "John Bartos <jbartos@dataonline.com>"
-  ],
-  "moduleType": [
-    "globals"
+    "jbartos7@gmail.com"
   ],
   "license": "MIT",
-  "private": true,
   "dependencies": {
-    "angular": "~1.3.14",
     "angular-resource": "~1.3.14",
+    "angular-ui-router": "~0.2.13",
     "angular-route": "~1.3.14",
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0",
     "jquery": "~2.1.3",
     "toastr": "~2.1.1",
-    "angular-ui-router": "~0.2.13",
-    "bootstrap": "~3.3.4",
-    "font-awesome": "~4.3.0"
-  }
+    "masonry": "~3.3.0"
+  },
+  "homepage": "https://github.com/johnBartos/Website",
+  "description": "A website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "globals",
+    "node"
+  ]
 }

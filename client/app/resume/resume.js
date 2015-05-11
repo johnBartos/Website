@@ -4,6 +4,6 @@ angular.module('websiteApp')
   .state('resume', {
     url: '/resume',
     templateUrl: 'app/resume/resume.html',
-    controller: 'MainController'
+    controller: 'ResumeController'
   });
 });
