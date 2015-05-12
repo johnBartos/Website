@@ -34,10 +34,10 @@ angular.module('websiteApp')
     console.log("Getting technologies for " + $stateParams.jobId);
     $scope.technologies = technologies;
   })
-  .directive('clickExpand', function(){
-    return{
-      restrict: 'A',
-      scope: true
-    }
-  })
+  // .directive('clickExpand', function(){
+  //   return{
+  //     restrict: 'A',
+  //     scope: true
+  //   }
+  // })
 });
