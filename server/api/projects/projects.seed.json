@@ -5,6 +5,11 @@
       "Link": "https://github.com/johnBartos/Website"
   },
   {
+    "Name": "Visual Service Monitor",
+    "Description": "This is a little PowerShell script I developed to provide a visual readout of service status. I'm a strong believer in making your own software tools; they don't need to be super-serious production-ready scripts with unit tests and lengthy documentation, just little helpers to make your life easier. I got tired of constantly repeating the same get-service command to check if a service was installed correctly. So I came up with this in my spare time. It provides a real-time readout of the status of services, and color codes the states for instant assessment. It also dynamically resizes the list when a service is added or removed, so it's perfect to monitor the progress of our installation process. Check out the git page, it has a little .gif of it in action.",
+    "Link": "https://github.com/johnBartos/VisualServiceMonitor"
+  }
+  {
     "Name": "Descending Particles",
     "Description": "A small game I made to learn Python. I've always been fascinated by graphics processing, so I decided to emulate a classic game, Falling Sands. I bit off a bit more than I could chew, really, but it was a fun project. And now I'm fully qualified to complain about how slow Python is compared to C++.",
     "Link": "https://github.com/johnBartos/DescendingParticles"
