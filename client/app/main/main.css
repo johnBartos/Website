@@ -7,6 +7,11 @@
   word-wrap:break-word;
 }
 
+.left{
+  background-color: #DDD;
+  min-height: 250px;
+}
+
 .icon{
   padding:0px 0px 12px 0px;
 }
@@ -15,22 +20,9 @@
   text-align: right;
 }
 
- /* full height for demo purposes */
-.vertical-center {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-
 .banner{
   background-color: #fff;
   margin-bottom: 0px;
-}
-
-.noWhitespace{
-  margin:0;
-  padding:0;
-  border:0;
 }
 
 
@@ -41,6 +33,10 @@ hr {
   width: 100%;
   background-color:#000000;
   height: 2px;
+}
+
+.icon-bar{
+  margin-bottom:50px;
 }
 
 a:link{
@@ -56,4 +52,14 @@ a:hover {
 }
 a:active{
   color: #000;
+}
+
+.temp1{
+  background-color:#00B16A;
+}
+.temp2{
+  background-color:#D64541;
+}
+.temp3{
+  background-color:#19B5FE;
 }
