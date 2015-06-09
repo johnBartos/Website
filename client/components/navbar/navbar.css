@@ -82,4 +82,8 @@
   background-position: 50% 100%;
   background-repeat: no-repeat;
   }
-}
+
+  .test
+  {
+    vertical-align: middle;
+  }
