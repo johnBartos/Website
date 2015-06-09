@@ -54,8 +54,15 @@ a:active{
   color: #000;
 }
 
-.temp1{
-  background-color:#00B16A;
+.square{
+  min-height: 150px;
+
+}
+ .temp1{
+  vertical-align: center;
+  border-right: 3px solid;
+  border-right-color:#00B16A;
+  min-height: 500px;
 }
 .temp2{
   background-color:#D64541;
