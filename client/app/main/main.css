@@ -55,18 +55,27 @@ a:active{
 }
 
 .square{
-  min-height: 150px;
+  min-height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
 
+.square > h2{
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
 }
+
  .temp1{
-  vertical-align: center;
-  border-right: 3px solid;
-  border-right-color:#00B16A;
-  min-height: 500px;
+  border-bottom: 2px solid;
+  border-bottom-color:#00B16A;
 }
+
 .temp2{
-  background-color:#D64541;
+  border-bottom: 2px solid;
+  border-bottom-color:#D64541;
 }
 .temp3{
-  background-color:#19B5FE;
+  border-bottom: 2px solid;
+  border-bottom-color:#19B5FE;
 }

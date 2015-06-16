@@ -15,19 +15,24 @@
   width: 100%;
   background-color:#eee;
   height: 1px;
+  margin-bottom: 5px;
 }
 
-a:link{
-  color: #000;
+.footer > .icon-link{
+  text-decoration: none;
 }
 
-a:visited{
-  color: #000;
+.footer .icon-link:hover{
+    text-decoration: none;
 }
 
-a:hover {
-  color: #373C45;
+.footer .icon-link > i{
+  padding: 0px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-a:active{
-  color: #000;
+
+.footer .icon-link > i:hover{
+  color:black;
 }
