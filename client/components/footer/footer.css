@@ -2,20 +2,19 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 30px;
-  background-color: #FFFFFF;
+  /*height: 50px;*/
+  background-color: #FFF;
   text-align: center;
 }
 
-.footerRule {
+.footer hr {
   border: 0;
   clear:both;
   display:block;
   width: 100%;
   background-color:#eee;
   height: 1px;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 .footer > .icon-link{
@@ -28,9 +27,7 @@
 
 .footer .icon-link > i{
   padding: 0px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 5px 10px 5px 10px;
 }
 
 .footer .icon-link > i:hover{
