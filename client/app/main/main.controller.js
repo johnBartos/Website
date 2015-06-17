@@ -2,5 +2,9 @@
 
 angular.module('websiteApp')
 .controller('MainController', function ($scope, $http) {
-  $scope.myVar = [];
+  $scope.commits = [];
+
+  $http.get('/api/commits').success(function(commits){
+    $scope.commits = commits;
+  });
 });

@@ -79,3 +79,16 @@ a:active{
   border-bottom: 2px solid;
   border-bottom-color:#19B5FE;
 }
+
+.commit{
+  min-height: 50px;
+  border: 1px solid #DDD;
+  margin: 10px 0px 10px 0px;
+  padding-left: 0;
+}
+
+.commit img
+{
+  text-align: left;
+  padding: 0;
+}
