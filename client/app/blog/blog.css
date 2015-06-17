@@ -1,9 +1,4 @@
-.post {
-  /*padding: 25px 25px 50px 50px;*/
-}
-
-
-hr {
+.post-list hr {
   border: 0;
   clear:both;
   display:block;
@@ -15,14 +10,4 @@ hr {
 .post > hr {
     background-color:#DDDDDD;
     height: 1px;
-}
-
-.panel > .panel-heading {
-  background-image: none;
-  background-color: #4C535F;
-  color: white;
-}
-
-.panel > .panel-footer {
-  padding: 0px 0px 0px 15px;
 }

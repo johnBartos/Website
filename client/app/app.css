@@ -20,15 +20,15 @@
   font-style: normal;
 }
 
-html{
+html {
   position: relative;
-  min-height:100%;
+  min-height: 100%;
 }
 body {
   font-family: 'FontAwesome', Fallback, sans-serif;
   color: #000;
   background-color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .navbar {
