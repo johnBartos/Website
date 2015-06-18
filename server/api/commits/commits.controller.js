@@ -13,7 +13,7 @@ exports.index = function(req, res){
   request(options, function (error, response, body) {
     console.log('Response from Git: ' + response.statusCode);
     if (!error && response.statusCode == 200) {
-      var formattedCommits = formatter.format(body, 10);
+      var formattedCommits = formatter.format(body, 5);
       res.json(formattedCommits);
     }
   })

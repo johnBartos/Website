@@ -26,7 +26,7 @@
 }
 
 
-hr {
+.jumbotron hr {
   border: 0;
   clear:both;
   display:block;
@@ -54,45 +54,25 @@ a:active{
   color: #000;
 }
 
-.square{
-  min-height: 20px;
-  line-height: 20px;
-  text-align: center;
-}
-
-.square > h2{
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0;
-}
-
- .temp1{
-  border-bottom: 2px solid;
-  border-bottom-color:#00B16A;
-}
-
-.temp2{
-  border-bottom: 2px solid;
-  border-bottom-color:#D64541;
-}
-.temp3{
-  border-bottom: 2px solid;
-  border-bottom-color:#19B5FE;
-}
-
 .commit{
+  min-height: 52px;
   max-height: 52px;
   height: 100%;
-  border: 1px solid #DDD;
   margin: 10px 0px 10px 0px;
   padding-left: 0;
+  overflow: hidden;
+  border: 1px solid #DDD;
   border-radius: 5px;
 }
 
-.commit img
-{
+.commit > .icon img{
   vertical-align: middle;
   padding: 0;
+  border-right: 1px solid #DDD;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+}
+
+.commit  .content > p {
+  font-size: 1em;
 }
