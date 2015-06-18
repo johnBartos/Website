@@ -17,8 +17,20 @@
         <div class = "col-md-12">
           <div ng-repeat="c in commits">
             <div class = "container commit">
-              <img width = "50" height = "50" src = {{c.avatar}} align = "left">
-              {{c.message}}
+              <a href = {{c.committer_url}}>
+                <div class = "col-md-1 icon">
+                    <img width = "50" height = "50" src = {{c.avatar}} align = "left">
+                </div>
+              </a>
+              <a href = {{c.commit_url}}>
+                <div class = "col-md-11 content">
+                  <p>
+                    {{c.message}}
+                    <br>
+                    <i class = "text-muted">{{c.date}}</i>
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
