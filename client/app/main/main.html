@@ -2,20 +2,28 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/main/main.css" />
 
-<div class = "jumbotron banner centered">
+<div class = "jumbotron main-content centered">
   <div class = "container">
     <div class = "row">
-      <div class = "col-md-6">
+      <div class = "col-md-6 about">
           <h2>Hello, World!</h2>
           <hr>
-          <h5>My name is John Bartos. I'm a Computer Engineer turned Software Engineer. "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</h5>
-          <i>(Still under construction - check Git for the latest commits!)</i>
+          <p>Hi There! I'm a software engineer living in New Jersey, currently
+              employed by DataOnline LLC. I graduated from Rutgers in 2014 with
+              a degree in Electrical and Computer Engineering. Somewhere along the line,
+              I fell for software and have been working as a developer ever since.
+              I currently work with .NET C#; however, I enjoy branching out to technologies
+              and languages (even JavaScript!). I'm comfortable working on all layers of
+              the stack but I excel on the backend and have a keen sense for
+              architecture. I have a strong engineering personality and constantly
+              strive to improve myself and my workplace. In my spare time I usually work
+              on my 3D printer, chip away at a side project, lift heavy objects, or slack off.</p>
       </div>
       <div class = "col-md-6">
         <h2>Latest Commits</h2>
         <hr>
         <div class = "col-md-12">
-          <div ng-repeat="c in commits">
+          <div ng-repeat="c in commits" ng-style="{opacity: (1-($index/10))}">
             <div class = "container commit">
               <a href = {{c.committer_url}}>
                 <div class = "col-md-1 icon">
@@ -38,25 +46,3 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- <div class = "container icon-bar">
-  <div class = "row">
-    <div class = "col-md-offset-3 col-md-2 centered">
-        <a href = "https://github.com/johnBartos">
-            <div class="fa fa-github fa-5x"></div>
-        </a>
-    </div>
-    <div class = "col-md-2 centered">
-        <a href = "mailto:jbartos7@gmail.com">
-          <div class="fa fa-envelope fa-5x"></div>
-        </a>
-    </div>
-    <div class = "col-md-2 centered">
-        <a href = "https://www.linkedin.com/profile/view?id=383055685&trk=nav_responsive_tab_profile">
-          <div class="fa fa-linkedin-square fa-5x"></div>
-        </a>
-    </div>
-  </div>
-</div> -->

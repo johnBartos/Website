@@ -20,7 +20,7 @@
   text-align: right;
 }
 
-.banner{
+.main-content{
   background-color: #fff;
   margin-bottom: 0px;
 }
@@ -74,5 +74,9 @@ a:active{
 }
 
 .commit  .content > p {
+  font-size: 1em;
+}
+
+.main-content .about p {
   font-size: 1em;
 }
