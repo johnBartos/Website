@@ -8,18 +8,6 @@
 
   {
     "jobId": "dataonline",
-    "Name": "C++",
-    "Skill": "Ite"
-  },
-
-  {
-    "jobId": "dataonline",
-    "Name": "C",
-    "Skill": "Good"
-  },
-
-  {
-    "jobId": "dataonline",
     "Name": "JavaScript",
     "Skill": "Good"
   },
@@ -38,19 +26,7 @@
 
   {
     "jobId": "dataonline",
-    "Name": "Python",
-    "Skill": "Good"
-  },
-
-  {
-    "jobId": "dataonline",
     "Name": "PowerShell",
-    "Skill": "Good"
-  },
-
-  {
-    "jobId": "dataonline",
-    "Name": "Bash",
     "Skill": "Good"
   },
 
