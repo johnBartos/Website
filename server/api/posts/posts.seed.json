@@ -3,5 +3,11 @@
     "Title": "First",
     "Date": "May 7, 2015",
     "Content": "I haven't really anything to write about yet."
+  },
+
+  {
+    "Title": "Shifting Balances",
+    "Date": "July 13, 2015",
+    "Content": "Maintaining balance is a balancing act in and of itself. Do I exercise today, or take some much needed relaxation? Should I expose another interface member, or pack more features into the existing set? Concerns are often coupled together with other, seemingly unrelated matters, and produce a rippling effect throughout the entire system.<br><br><ul><li>Know what youre trying to balance.<ul><li>Take stock of everything that's going on in your system. For software, this is easy - understand the task, ask a lot of questions, and identify everything that holds influence. For life, this task is a bit more difficult. Coarsely organized, most balances fall into three categories: things you are doing, things you want to be doing, and things you should (or should not) be doing. </li></ul></li><li>Fix the most important - and forget about the rest(for now)</li><ul><li>In my life, I feel that exercising, eating right, and learning are really important. In software, I believe having SOLID objects, unit tests, and complete/minimal interfaces are key. In each case, I do my best to make sure I prioritize these items first. The point here is to build a strong, fault-tolerant foundation to build upon.</li></ul><li>Adjust slowly, steadily, and smoothly - and bias towards flexibility<ul><li>When possible, go at your own pace. But in both software and life, priorities change. Sometimes the obligatory pointy-haired boss asks you to \"change things up a bit\". You need to be able to hot-swap prio </li></ul></li><li>Be flexible, and don't be afraid to start over.</li></ul>"
   }
 ]
