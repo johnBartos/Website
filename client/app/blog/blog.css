@@ -11,3 +11,8 @@
     background-color:#DDDDDD;
     height: 1px;
 }
+
+.code-container {
+  display:block;
+  text-align: center;
+}
