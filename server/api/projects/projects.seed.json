@@ -10,9 +10,8 @@
     "Link": "https://github.com/johnBartos/VisualServiceMonitor"
   },
   {
-    "Name": "Descending Particles",
-    "Description": "A small game I made to learn Python. I've always been fascinated by graphics processing, so I decided to emulate a classic game, Falling Sands. I bit off a bit more than I could chew, really, but it was a fun project. And now I'm fully qualified to complain about how slow Python is compared to C++.",
-    "Link": "https://github.com/johnBartos/DescendingParticles"
+    "Name": "Z-Probe Configurator",
+    "Description": "When I first went to configure the auto-leveling Z-Probe for my 3D printer, I was lost in rings of configuration hell; never before had I seen so many #DEFINEs in one file. Even though my config-reading skills were keen, I still struggled to get everything just right - even with a guide. The thought of doing it again has been keeping me from upgrading my printer firmware, but I really wanted the new version of Marlin. So I decided to be lazy and create a script to do it for me! It originally started as a small hack-job that I planned on completing within a Saturday, but it evolved into this neat-looking GUI that took a week or so longer to complete. Even though it seemed a simple project I learned much on how to properly read and write files, and gained some slick Python skills. Furthermore, it has helped a small amount of people - I posted it to the 3D printing subreddit and got a few upvotes! It's the first piece of OSS I've released, and I'm quite pleased with it."
   },
   {
     "Name": "3D Printing",
