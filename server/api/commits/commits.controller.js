@@ -1,5 +1,5 @@
 'use strict'
-var request = require('request');
+var rp = require('request-promise');
 var formatter = require('./commits.formatter.js');
 
 var options = {
@@ -17,4 +17,37 @@ exports.index = function(req, res){
       res.json(formattedCommits);
     }
   })
+};
+
+
+function getReposOptions() {
+  return {
+    uri: 'https://api.github.com/users/johnBartos/repos',
+    method: 'GET',
+    headers: {'user-agent': 'node.js'}
+  };
+}
+
+var getReposTransform = function (userManifes) {
+
+};
+
+exports.get = function (req, res) {
+  console.log('Getting commits');
+
+  var getRepos = function () {
+    var options = getReposOptions();
+
+    return rp.get(options)
+    .then(function (userManifest) {
+    })
+    .catch(function (reason) {
+      console.log(reason);
+      res.status(400).json({
+        success: false,
+        reason: reason
+      });
+    });
+  }
+  getRepos();
 };
