@@ -24,12 +24,19 @@ function getReposOptions() {
   return {
     uri: 'https://api.github.com/users/johnBartos/repos',
     method: 'GET',
-    headers: {'user-agent': 'node.js'}
+    headers: {'user-agent': 'node.js'},
+    transform: getReposTransform
   };
 }
 
-var getReposTransform = function (userManifes) {
-
+var getReposTransform = function (userManifest) {
+    var repoNames = [];
+    var repos = JSON.parse(userManifest);
+    repos.forEach( function (element, index, array) {
+      var repo = element;
+      repoNames.push(repo.name);
+    });
+    return repoNames;
 };
 
 exports.get = function (req, res) {
@@ -39,7 +46,8 @@ exports.get = function (req, res) {
     var options = getReposOptions();
 
     return rp.get(options)
-    .then(function (userManifest) {
+    .then(function (repos) {
+      console.log(repos);
     })
     .catch(function (reason) {
       console.log(reason);
