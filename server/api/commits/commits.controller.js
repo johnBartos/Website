@@ -1,6 +1,8 @@
 'use strict'
 var rp = require('request-promise');
 var formatter = require('./commits.formatter.js');
+var transform = require('stream').Transform;
+
 
 var options = {
   uri: 'https://api.github.com/repos/johnBartos/Website/commits',
@@ -49,8 +51,7 @@ var getReposTransform = function (userManifest) {
 };
 
 var getCommitsTransform = function (allCommits) {
-  console.log(allCommits);
-  return allCommits;
+  return formatter.format(allCommits, 5);
 };
 
 exports.getRepos = function (req, res) {
@@ -60,14 +61,17 @@ exports.getRepos = function (req, res) {
     var options = getReposOptions();
 
     return rp.get(options)
-    .pipe(res)
-    .on('error', function (reason) {
+    .then(function(repoNames) {
+      res.status(200).json(repoNames);
+      })
+    .catch(function (reason) {
       console.log(reason);
       res.status(400).json({
         success: false,
         reason: reason
       });
     });
+
   };
 
   getRepos()
@@ -80,8 +84,10 @@ exports.getCommits = function (req, res) {
   var getCommits = function (repoName) {
     var options = getCommitsOptions(repoName);
     return rp.get(options)
-    .pipe(res)
-    .on('error', function(reason) {
+    .then(function(commits) {
+      res.status(200).json(commits);
+    })
+    .catch(function(reason) {
       console.log(reason);
       res.status(400).json({
         success: false,
