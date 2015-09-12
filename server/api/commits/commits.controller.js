@@ -31,7 +31,7 @@ function getReposOptions() {
 
 function getCommitsOptions(repo) {
   return {
-    uri: 'https://api.github.com/repos/johnBartos/' + repo,
+    uri: 'https://api.github.com/repos/johnBartos/' + repo + '/commits',
     method: 'GET',
     headers: {'user-agent': 'node.js'},
     transform: getCommitsTransform
