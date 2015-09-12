@@ -29,6 +29,15 @@ function getReposOptions() {
   };
 }
 
+function getCommitsOptions(repo) {
+  return {
+    uri: 'https://api.github.com/repos/johnBartos/' + repo,
+    method: 'GET',
+    headers: {'user-agent': 'node.js'},
+    transform: getCommitsTransform
+  };
+}
+
 var getReposTransform = function (userManifest) {
     var repoNames = [];
     var repos = JSON.parse(userManifest);
@@ -39,23 +48,47 @@ var getReposTransform = function (userManifest) {
     return repoNames;
 };
 
-exports.get = function (req, res) {
-  console.log('Getting commits');
+var getCommitsTransform = function (allCommits) {
+  console.log(allCommits);
+  return allCommits;
+};
+
+exports.getRepos = function (req, res) {
+  console.log('Getting repos');
 
   var getRepos = function () {
     var options = getReposOptions();
 
     return rp.get(options)
-    .then(function (repos) {
-      console.log(repos);
-    })
-    .catch(function (reason) {
+    .pipe(res)
+    .on('error', function (reason) {
       console.log(reason);
       res.status(400).json({
         success: false,
         reason: reason
       });
     });
-  }
-  getRepos();
+  };
+
+  getRepos()
+};
+
+exports.getCommits = function (req, res) {
+  var repoName = req.params.repoName;
+  console.log('Getting commits for ' + repoName);
+
+  var getCommits = function (repoName) {
+    var options = getCommitsOptions(repoName);
+    return rp.get(options)
+    .pipe(res)
+    .on('error', function(reason) {
+      console.log(reason);
+      res.status(400).json({
+        success: false,
+        reason: reason
+      });
+    });
+  };
+
+  getCommits(repoName);
 };
