@@ -7,15 +7,25 @@ angular.module('websiteApp')
     .then(function(result) {
       console.log(result);
       var repos = result.data;
-      return $http.get('/api/commits/repo/' + repos[0]);
+      return function() {
+      repos.forEach(function (element, index, array) {
+        getCommitForRepo(element);
+      });
+    }
     })
     .then(function(result) {
       console.log(result);
-      var commits = result.data;
+      //var commits = result.data;
     })
     .catch(function (error) {
       console.log('ERROR ' + error);
     });
+  };
+
+  function getCommitForRepo(repo) {
+    return $http.get('/api/commits/repo/' + repo);
   }
+
+
 
 });
