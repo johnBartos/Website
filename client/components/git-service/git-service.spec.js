@@ -6,5 +6,11 @@ ngDescribe({
     it('has a function named getRepos', function () {
       expect(typeof deps.gitService.getRepos).toEqual('function');
     });
+
+    it('returns a promise', function () {
+      var p = deps.gitService.getRepos();
+      expect(p).not.toBeUndefined();
+      expect(typeof p.then).toEqual('function');
+    })
   }
 });
