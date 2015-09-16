@@ -3,8 +3,7 @@ ngDescribe({
   modules: 'websiteApp',
   inject: 'gitService',
   tests: function (deps) {
-    it('gets all repo names from git', function() {
-      console.log(deps);
+    it('has a function named getRepos', function () {
       expect(typeof deps.gitService.getRepos).toEqual('function');
     });
   }
