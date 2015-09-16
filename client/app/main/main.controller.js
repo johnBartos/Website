@@ -7,6 +7,12 @@ angular.module('websiteApp')
   // $http.get('/api/commits').success(function(commits){
   //   $scope.commits = commits;
   // });
-  gitService.getCommits();
+
+  (function() {
+    gitService.getRepos()
+    .then( function(result) {
+      console.log('result is ' + result);
+    });
+  })();
 
 });
