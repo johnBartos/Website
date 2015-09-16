@@ -8,11 +8,11 @@ angular.module('websiteApp')
   //   $scope.commits = commits;
   // });
 
+
+
   (function() {
     gitService.getRepos()
-    .then( function(result) {
-      console.log('result is ' + result);
-    });
+    .then(gitService.getCommits);
   })();
 
 });

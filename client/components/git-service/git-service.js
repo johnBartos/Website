@@ -8,15 +8,14 @@ angular.module('websiteApp')
     return new Promise( function (resolve, reject) {
 
       $http.get('/api/commits/repos')
-      .then(function (result) {
-        console.log(result);
-        var repos = result.data;
-        console.log('repos are ' + repos);
-        resolve(repos);
-      })
-      .catch(function (error) {
-        console.log('ERROR ' + error);
-      });
+        .then(function (result) {
+          console.log(result);
+          resolve(result.data);
+        })
+        .catch(function (error) {
+          console.log('ERROR ' + error);
+          reject();
+        });
 
   });
 
@@ -26,15 +25,23 @@ angular.module('websiteApp')
 
     console.log('getting commits');
 
-    $http.get('/api/commits/repo/' + repo)
-    .then(function (result) {
-      console.log(result);
-      var commits = result.data;
-      return commits;
-    })
-    .catch(function (error) {
-      console.log('ERROR ' + error);
-    });
+    var allCalls = [];
+
+    repoNames.forEach( function (element, index, array) {
+        allCalls.push($http.get('/api/commits/repo/' + element));
+  });
+
+  return new Promise ( function (resolve, reject) {
+    $q.all(allCalls)
+      .then( function (result) {
+        console.log(result);
+      })
+      .catch(function (error) {
+        console.log('ERROR ' + error);
+        reject();
+      });
+  });
 
   };
+
 });
