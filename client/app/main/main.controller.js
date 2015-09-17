@@ -17,10 +17,10 @@ angular.module('websiteApp')
       console.log('got all commits ' + result);
       $scope.commits = result;
       $scope.$apply();
-    });
+    })
     .catch (function (reason) {
       console.log('couldnt get commits from git-service');
-    }
+    });
   })();
 
 });

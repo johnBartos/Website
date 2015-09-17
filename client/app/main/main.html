@@ -15,7 +15,7 @@
         <h2>Latest Commits</h2>
         <hr>
         <div class = "col-md-12">
-          <div ng-repeat="c in commits" ng-style="{opacity: (1-($index/10))}">
+          <div ng-repeat="c in commits | orderBy: '-dateInt' | limitTo: 5" ng-style="{opacity: (1-($index/10))}">
             <div class = "container commit">
               <a href = {{c.committer_url}}>
                 <div class = "col-md-1 icon">
