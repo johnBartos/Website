@@ -44,6 +44,7 @@ angular.module('websiteApp')
         });
 
         console.log(listOfCommits);
+        resolve(listOfCommits);
       })
       .catch(function (error) {
         console.log('ERROR ' + error);
