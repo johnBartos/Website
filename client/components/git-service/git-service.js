@@ -35,6 +35,15 @@ angular.module('websiteApp')
     $q.all(allCalls)
       .then( function (result) {
         console.log(result);
+
+        var listOfCommits = result.map( function (c) {
+          return c.data;
+        })
+        .reduce( function (a, b) {
+          return a.concat(b);
+        });
+
+        console.log(listOfCommits);
       })
       .catch(function (error) {
         console.log('ERROR ' + error);
