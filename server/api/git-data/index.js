@@ -1,13 +1,10 @@
 'use strict'
 
 var express = require('express');
-var commitsController = require('./commits/commits.controller');
-var reposController = require('./repos/repos.controller');
+var repos = require('./repos');
 
 var router = express.Router();
 
-router.get('/repos', reposController.getRepos);
-
-router.get('/repo/:repoName/commits', commitsController.getCommits);
+router.use('/repos', repos);
 
 module.exports = router;
