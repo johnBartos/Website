@@ -1,7 +1,7 @@
 'use strict'
 var rp = require('request-promise');
 
-exports.getRepos = function (req, res) {
+exports.getRepoNames = function (req, res) {
   console.log('Getting repos');
 
   var getRepos = function () {

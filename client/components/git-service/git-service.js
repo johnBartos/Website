@@ -7,7 +7,7 @@ angular.module('websiteApp')
 
     return new Promise( function (resolve, reject) {
 
-      $http.get('/api/git-data/repos')
+      $http.get('/api/git-data/repos/names')
         .then(function (result) {
           console.log(result);
           resolve(result.data);
@@ -28,7 +28,7 @@ angular.module('websiteApp')
     var allCalls = [];
 
     repoNames.forEach( function (element, index, array) {
-        allCalls.push($http.get('/api/git-data/repo/' + element + '/commits'));
+        allCalls.push($http.get('/api/git-data/repos/' + element + '/commits'));
   });
 
   return new Promise ( function (resolve, reject) {
