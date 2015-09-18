@@ -6,8 +6,8 @@ var reposController = require('./repos/repos.controller');
 
 var router = express.Router();
 
-router.get('/repos', controller.getRepos);
+router.get('/repos', reposController.getRepos);
 
-router.get('/repo/:repoName/commits', controller.getCommits);
+router.get('/repo/:repoName/commits', commitsController.getCommits);
 
 module.exports = router;
