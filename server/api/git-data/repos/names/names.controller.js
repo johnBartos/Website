@@ -17,13 +17,12 @@ exports.getRepoNames = function (req, res) {
     var options = getReposOptions();
     return rp.get(options)
     .then(function(repoNames) {
-      cache.names = repoNames;
       res.status(200).json(repoNames);
     })
     .catch(errors.StatusCodeError, function (reason) {
-      console.log(reason);
-      if(reason.status == '304') {
-
+      if(reason.statusCode == '304') {
+        console.log('repo names havent changed, using values from cache: ' + cache.names);
+        res.status(200).json(cache.names);
       }
       else {
         res.status(400).json({
@@ -44,15 +43,17 @@ exports.getRepoNames = function (req, res) {
 };
 
 var getReposTransform = function (body, response) {
-    console.log('response etag is ' + response.headers.etag);
-    cache.etag = response.headers.etag;
-
     var repoNames = [];
     var repos = JSON.parse(body);
     repos.forEach( function (element, index, array) {
       var repo = element;
       repoNames.push(repo.name);
     });
+
+    console.log('response etag is ' + response.headers.etag);
+    cache.etag = response.headers.etag;
+    cache.names = repoNames;
+
     return repoNames;
 };
 
@@ -61,9 +62,9 @@ function getReposOptions() {
   return {
     uri: 'https://api.github.com/users/johnBartos/repos',
     method: 'GET',
-    headers: {'user-agent': 'node.js'},
+    headers: {'user-agent': 'node.js', 'If-None-Match': cache.etag},
     transform: getReposTransform,
-    resolveWithFullResponse: true
+    resolveWithFullResponse: true,
   };
 }
 
