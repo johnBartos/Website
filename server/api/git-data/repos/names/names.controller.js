@@ -1,17 +1,23 @@
 'use strict'
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
-var redis = require('redis');
+
+var cache = {
+  etag : '',
+  names : []
+};
 
 exports.getRepoNames = function (req, res) {
   console.log('Getting repos');
+
+  console.log('cache etag: ' + cache.etag + ' cache names: ' + cache.names);
 
   var getRepos = function () {
 
     var options = getReposOptions();
     return rp.get(options)
-    .then(function(repoNames, response) {
-      console.log('response is ' + response);
+    .then(function(repoNames) {
+      cache.names = repoNames;
       res.status(200).json(repoNames);
     })
     .catch(errors.StatusCodeError, function (reason) {
@@ -26,7 +32,7 @@ exports.getRepoNames = function (req, res) {
         });
       }
     })
-    .catch(errors.RequestError,function (reason) {
+    .catch(errors.RequestError, function (reason) {
       res.status(500).json({
         success: false,
         reason: reason
@@ -37,9 +43,12 @@ exports.getRepoNames = function (req, res) {
   getRepos();
 };
 
-var getReposTransform = function (userManifest) {
+var getReposTransform = function (body, response) {
+    console.log('response etag is ' + response.headers.etag);
+    cache.etag = response.headers.etag;
+
     var repoNames = [];
-    var repos = JSON.parse(userManifest);
+    var repos = JSON.parse(body);
     repos.forEach( function (element, index, array) {
       var repo = element;
       repoNames.push(repo.name);
@@ -53,14 +62,15 @@ function getReposOptions() {
     uri: 'https://api.github.com/users/johnBartos/repos',
     method: 'GET',
     headers: {'user-agent': 'node.js'},
-    transform: getReposTransform
+    transform: getReposTransform,
+    resolveWithFullResponse: true
   };
 }
 
 function getRepoNamesFromCache(eTag) {
   return new Promise (function (resolve, reject) {
     try {
-      var client = redis.createClient();
+      resolve();
     }
     catch (exception) {
       reject();
