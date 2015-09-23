@@ -4,20 +4,24 @@ var errors = require('request-promise/errors');
 
 var cache = {
   etag : '',
-  names : []
+  names : [],
+  save: function (etag, repoNames) {
+    this.etag = etag;
+    this.names = repoNames;
+  }
 };
 
 exports.getRepoNames = function (req, res) {
   console.log('Getting repos');
-
   console.log('cache etag: ' + cache.etag + ' cache names: ' + cache.names);
 
   var getRepos = function () {
 
     var options = getReposOptions();
     return rp.get(options)
-    .then(function(repoNames) {
-      res.status(200).json(repoNames);
+    .then(function(response) {
+      cache.save(response.etag, response.repoNames);
+      res.status(200).json(response.repoNames);
     })
     .catch(errors.StatusCodeError, function (reason) {
       if(reason.statusCode == '304') {
@@ -50,13 +54,11 @@ var getReposTransform = function (body, response) {
       repoNames.push(repo.name);
     });
 
-    console.log('response etag is ' + response.headers.etag);
-    cache.etag = response.headers.etag;
-    cache.names = repoNames;
-
-    return repoNames;
+    return  {
+      repoNames : repoNames,
+      etag: response.headers.etag
+    };
 };
-
 
 function getReposOptions() {
   return {
