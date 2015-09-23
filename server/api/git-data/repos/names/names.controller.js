@@ -67,20 +67,3 @@ function getReposOptions() {
     resolveWithFullResponse: true,
   };
 }
-
-function getRepoNamesFromCache(eTag) {
-  return new Promise (function (resolve, reject) {
-    try {
-      resolve();
-    }
-    catch (exception) {
-      reject();
-    }
-  });
-}
-
-function saveRepoNamesToCache() {
-  return new Promise ( function(resolve, reject) {
-
-  });
-}
