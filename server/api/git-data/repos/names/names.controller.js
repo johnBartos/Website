@@ -1,15 +1,8 @@
 'use strict'
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
+var cache = require('./names.cache.js');
 
-var cache = {
-  etag : '',
-  names : [],
-  save: function (etag, repoNames) {
-    this.etag = etag;
-    this.names = repoNames;
-  }
-};
 
 exports.getRepoNames = function (req, res) {
   console.log('Getting repos');

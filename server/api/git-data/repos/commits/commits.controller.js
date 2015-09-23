@@ -2,22 +2,8 @@
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
 var formatter = require('./commits.formatter.js');
+var cache = require('./commits.cache.js');
 
-var cache = {
-  save: function(repo, etag, commits) {
-      this[repo] = {
-        etag: etag,
-        commits: commits
-      }
-  },
-  getETag: function (repo) {
-    var etag = '';
-    if(typeof this[repo] !== 'undefined') {
-      etag = this[repo].etag;
-    };
-    return etag;
-  }
-};
 
 exports.getCommits = function (req, res) {
   var repoName = req.params.repoName;
