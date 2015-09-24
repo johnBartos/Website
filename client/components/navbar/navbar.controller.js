@@ -1,4 +1,4 @@
-'use strict';
+(function () { 'use strict'; })();
 
 angular.module('websiteApp')
 .controller('NavbarController', function ($scope, $location) {
@@ -23,7 +23,7 @@ angular.module('websiteApp')
 
   $scope.isCollapsed = true;
 
-  $scope.isActive = function(route) {
+  $scope.isActive = function (route) {
     return route === $location.path();
   };
 });

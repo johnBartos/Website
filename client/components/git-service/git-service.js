@@ -1,3 +1,5 @@
+(function () { 'use strict'; })();
+
 angular.module('websiteApp')
 .service('gitService', function ($http, $q) {
 
@@ -27,19 +29,19 @@ angular.module('websiteApp')
 
     var allCalls = [];
 
-    repoNames.forEach( function (element, index, array) {
+    repoNames.forEach(function (element, index, array) {
         allCalls.push($http.get('/api/git-data/repos/' + element + '/commits'));
   });
 
-  return new Promise ( function (resolve, reject) {
+  return new Promise (function (resolve, reject) {
     $q.all(allCalls)
-      .then( function (result) {
+      .then(function (result) {
         console.log(result);
 
-        var listOfCommits = result.map( function (c) {
+        var listOfCommits = result.map(function (c) {
           return c.data;
         })
-        .reduce( function (a, b) {
+        .reduce(function (a, b) {
           return a.concat(b);
         });
 

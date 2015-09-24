@@ -1,3 +1,5 @@
+(function () { 'use strict'; })();
+
 angular.module('websiteApp')
 .config(function ($stateProvider) {
   $stateProvider

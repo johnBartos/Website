@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var db = require('./works.database');
 
 exports.get = function(req, res){

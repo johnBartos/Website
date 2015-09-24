@@ -14,7 +14,7 @@ exports.insert= function (record){
           });
       });
   });
-}
+};
 
 exports.get = function (callback){
   mongoClient.connect(url, function(err, db){
@@ -29,4 +29,4 @@ exports.get = function (callback){
           });
       });
   });
-}
+};

@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
 var cache = require('./names.cache.js');

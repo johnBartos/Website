@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var db = require('./posts.database');
 
 exports.index = function(req, res){
