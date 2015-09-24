@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
 var formatter = require('./commits.formatter.js');
@@ -49,7 +50,7 @@ function getCommitsTransform (body, response) {
     commits: commits,
     etag: response.headers.etag
   };
-};
+}
 
 function getCommitsOptions(repo) {
   return {
@@ -59,4 +60,4 @@ function getCommitsOptions(repo) {
     resolveWithFullResponse: true,
     transform: getCommitsTransform
   };
-};
+}

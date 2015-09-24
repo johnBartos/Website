@@ -1,3 +1,5 @@
+'use strict';
+
 var moment = require('moment');
 
 exports.format = function (blob, n){
@@ -5,7 +7,7 @@ exports.format = function (blob, n){
   var last_commits = commits.slice(0, n);
   var formatted_commits = [];
 
-  for(i in last_commits)
+  for(var i in last_commits)
     {
       var record = last_commits[i];
       var formatted_commit = {
@@ -21,13 +23,13 @@ exports.format = function (blob, n){
       formatted_commits.push(formatted_commit);
     }
     return formatted_commits;
-}
+};
 
 String.prototype.trunc = function(n){
     if(this.length < n)
       return this;
 
-    s_ = this.substr(0, n-1);
-    s_ = s_.substr(0, s_.lastIndexOf(' '));
-    return s_ + '...';
-}
+    var truncStr = this.substr(0, n-1);
+    truncStr = truncStr.substr(0, truncStr.lastIndexOf(' '));
+    return truncStr + '...';
+};

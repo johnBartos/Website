@@ -1,5 +1,5 @@
-'use strict';
+(function () { 'use strict'; })();
 
 angular.module('websiteApp')
-.controller('ResumeController', function ($scope, $http) {
+  .controller('ResumeController', function ($scope, $http) {
 });

@@ -1,3 +1,5 @@
+'ues strict';
+
 var mongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/LocalDB";
 
@@ -14,4 +16,4 @@ exports.get = function (jobId, callback){
         });
       });
   });
-}
+};

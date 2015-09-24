@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 var db = require('./jobs.database');
 
 exports.get_all = function(req, res){

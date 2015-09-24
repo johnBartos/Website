@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var config = require('./environment');
 
-module.exports = function(app){
+module.exports = function (app){
     app.set('db', config.root + '/server/database/database.js');
     app.use(logger('dev'));
     app.use(bodyParser.urlencoded({
