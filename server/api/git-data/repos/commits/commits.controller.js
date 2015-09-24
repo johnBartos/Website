@@ -31,7 +31,7 @@ exports.getCommits = function (req, res) {
         });
       }
     })
-    .catch(errors.RequestError, function(reason) {
+    .catch(errors.RequestError, function (reason) {
       console.log(reason);
       res.status(400).json({
         success: false,
