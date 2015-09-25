@@ -2,19 +2,21 @@
 
 angular.module('websiteApp')
 .controller('MainController', function ($scope, $http, gitService) {
-  $scope.commits = [];
+  $scope.activity = {};
+  $scope.activity.commits = [];
 
-  (function() {
+  activate();
+
+  function activate () {
     gitService.getRepos()
     .then(gitService.getCommits)
-    .then( function (result) {
-      console.log('got all commits ' + result);
-      $scope.commits = result;
+    .then(function (result) {
+      $scope.activity.commits = result;
       $scope.$apply();
     })
     .catch (function (reason) {
       console.log('couldnt get commits from git-service');
     });
-  })();
+  }
 
 });

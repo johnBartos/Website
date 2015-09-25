@@ -2,9 +2,18 @@
 
 angular.module('websiteApp')
 .controller('ExperienceController', function ($scope, $http) {
-  $scope.jobs = [];
+  $scope.jobs = {};
+  $scope.list = [];
 
-  $http.get('/api/jobs').success(function (jobs){
-      $scope.jobs = jobs;
-  });
+  activate();
+
+  function activate () {
+    $http.get('/api/jobs')
+    .then(function (jobs) {
+      $scope.jobs.list = jobs.data;
+    }, function (error) {
+      console.log('Error getting jobs: ' + jobs);
+    });
+  }
+
 });
