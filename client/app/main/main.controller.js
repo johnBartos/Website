@@ -8,8 +8,7 @@ angular.module('websiteApp')
   activate();
 
   function activate () {
-    gitService.getRepos()
-    .then(gitService.getCommits)
+    gitService.getActivity()
     .then(function (result) {
       $scope.activity.commits = result;
       $scope.$apply();
