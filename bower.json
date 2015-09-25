@@ -18,7 +18,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "client/bower_components",
+    "client/bower_components"
   ],
   "moduleType": [
     "globals",

@@ -15,7 +15,7 @@ angular.module('websiteApp')
       $scope.$apply();
     })
     .catch (function (reason) {
-      console.log('couldnt get commits from git-service');
+      console.log('couldnt get activity from git-service');
     });
   }
 
