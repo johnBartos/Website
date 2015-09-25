@@ -4,7 +4,7 @@
 angular.module('websiteApp')
 .controller('JobsController', function ($scope, $http, $stateParams) {
 
-  $scope.job = '';
+  $scope.job = {};
   $scope.projects = [];
   $scope.languages = [];
   $scope.technologies = [];

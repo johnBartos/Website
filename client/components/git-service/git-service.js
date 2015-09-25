@@ -3,7 +3,12 @@
 angular.module('websiteApp')
 .service('gitService', function ($http, $q) {
 
-  this.getRepos = function () {
+  this.getActivity = function () {
+    return getRepos()
+    .then(getCommits);
+  };
+
+  function getRepos () {
 
     console.log('getting repos');
 
@@ -21,9 +26,9 @@ angular.module('websiteApp')
 
   });
 
-  };
+  }
 
-  this.getCommits = function (repoNames) {
+  function getCommits (repoNames) {
 
     console.log('getting commits');
 
@@ -34,6 +39,7 @@ angular.module('websiteApp')
   });
 
   return new Promise (function (resolve, reject) {
+
     $q.all(allCalls)
       .then(function (result) {
         console.log(result);
@@ -54,6 +60,6 @@ angular.module('websiteApp')
       });
   });
 
-  };
+  }
 
 });
