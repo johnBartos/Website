@@ -1,32 +1,23 @@
 var mongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/LocalDB";
 
-exports.insert= function (record){
-  mongoClient.connect(url, function(err, db){
-    if(err) { return console.dir(err); }
+exports.get = function () {
 
-      db.collection('Projects', function(err, collection){
-        if(err) { return console.dir(err); }
+  return new Promise(function (resolve, reject) {
 
-          collection.insert(record, function(err, inserted){
-            if(err) { return console.dir(err); }
+    mongoClient.connect(url, function (err, db){
+      if (err) { reject(err); }
 
-          });
-      });
+        db.collection('Projects', function (err, collection) {
+          if (err) { reject(err); }
+
+            collection.find().toArray(function (err, items) {
+              if (err) { reject(err); }
+              resolve(items);
+            });
+        });
+    });
+
   });
-};
 
-exports.get = function (callback){
-  mongoClient.connect(url, function(err, db){
-    if(err) { return console.dir(err); }
-
-      db.collection('Projects', function(err, collection){
-        if(err) { return console.dir(err); }
-
-          collection.find().toArray(function(err, items){
-            if(err) { return console.dir(err); }
-              callback(items);
-          });
-      });
-  });
 };

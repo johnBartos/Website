@@ -4,32 +4,44 @@ var mongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/LocalDB";
 
 
-exports.get_all = function (callback){
-  mongoClient.connect(url, function(err, db){
-    if(err) { return console.dir(err); }
+exports.get_all = function () {
 
-      db.collection('Jobs', function(err, collection){
-        if(err) { return console.dir(err); }
+  return new Promise(function (resolve, reject) {
 
-          collection.find().toArray(function(err, items){
-            if(err) { return console.dir(err); }
-              callback(items);
-          });
-      });
+    mongoClient.connect(url, function (err, db) {
+      if (err) { reject(err); }
+
+        db.collection('Jobs', function (err, collection) {
+          if (err) { reject(err); }
+
+            collection.find().toArray(function (err, items) {
+              if (err) { reject(err); }
+                resolve(items);
+            });
+        });
+    });
+
   });
+
 };
 
-exports.get = function (jobId, callback){
-  mongoClient.connect(url, function(err, db) {
-    if(err) { return console.dir(err); }
+exports.get = function (jobId) {
 
-    db.collection('Jobs', function(err, collection){
-      if(err) { return console.dir(err); }
+  return new Promise(function (resolve, reject) {
 
-        collection.find({jobId: jobId}).toArray(function(err, items){
-          if(err) { return console.dir(err); }
-            callback(items);
+    mongoClient.connect(url, function (err, db) {
+      if (err) { reject(err); }
+
+      db.collection('Jobs', function (err, collection) {
+        if (err) { reject(err); }
+
+          collection.find({jobId: jobId}).toArray(function (err, items) {
+            if (err) { reject(err); }
+            resolve(items);
+          });
       });
     });
+
   });
+
 };
