@@ -3,36 +3,66 @@
 
 angular.module('websiteApp')
 .controller('JobsController', function ($scope, $http, $stateParams) {
+
   $scope.job = '';
   $scope.projects = [];
   $scope.languages = [];
   $scope.technologies = [];
 
-  $http.get('/api/jobs/' + $stateParams.jobId).success(function (job){
-    console.log("Getting job: " + $stateParams.jobId);
-    $scope.job = job[0];
-  });
+  activate();
 
-  $http.get('/api/jobs/languages/' + $stateParams.jobId).success(function (languages){
-    console.log("Getting languages for " + $stateParams.jobId);
-    $scope.languages = languages;
-  });
+  function activate () {
 
-  $http.get('/api/jobs/works/' + $stateParams.jobId).success(function (works){
-    console.log("Getting works for " + $stateParams.jobId);
-    $scope.works = works;
+    getJob()
+    .then(getTechnologies)
+    .then(getLanguages)
+    .then(getWorks);
 
-    // Hack for getting Masonry to work
-    setTimeout(function () {
-      $(".masonry-container").masonry({
-          itemSelector: ".item",
-          columnWidth: ".item"
+
+     function getJob () {
+      return $http.get('/api/jobs/' + $stateParams.jobId)
+      .then(function (res){
+        $scope.job = res.data[0];
+      }, function (error) {
+        console.log('error getting job ' + $stateParams.jobId);
       });
-    }, 200);
-  });
+    }
 
-  $http.get('/api/jobs/technologies/' + $stateParams.jobId).success(function (technologies){
-    console.log("Getting technologies for " + $stateParams.jobId);
-    $scope.technologies = technologies;
-  });
+     function getLanguages () {
+      return $http.get('/api/jobs/languages/' + $stateParams.jobId)
+      .then(function (res){
+        $scope.languages = res.data;
+      }, function (error) {
+        console.log('error getting languages for job ' + $stateParams.jobId);
+      });
+    }
+
+    function getWorks () {
+      return $http.get('/api/jobs/works/' + $stateParams.jobId)
+      .then(function (res){
+        $scope.works = res.data;
+
+        // Hack for getting Masonry to work
+        setTimeout(function () {
+          $(".masonry-container").masonry({
+              itemSelector: ".item",
+              columnWidth: ".item"
+          });
+        }, 200);
+      }, function (error) {
+        console.log('error getting works for job ' + $stateParams.jobId);
+      });
+    }
+
+    function getTechnologies () {
+      return $http.get('/api/jobs/technologies/' + $stateParams.jobId)
+      .then(function (res){
+        $scope.technologies = res.data;
+      }, function (error) {
+        console.log('error getting technologies job ' + $stateParams.jobId);
+      });
+    }
+
+  }
+
 });
