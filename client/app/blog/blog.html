@@ -9,7 +9,7 @@
 
 <div class = "container post-list">
   <div class = "row">
-    <div ng-repeat="p in posts | orderBy:'Date':true">
+    <div ng-repeat="p in posts.list | orderBy:'Date':true">
       <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
             <h2> {{p.Title}} </h2>
             <h5 class = "text-muted"> {{p.Date}} </h5>
