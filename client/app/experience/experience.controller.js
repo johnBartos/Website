@@ -9,8 +9,8 @@ angular.module('websiteApp')
 
   function activate () {
     $http.get('/api/jobs')
-    .then(function (jobs) {
-      $scope.jobs.list = jobs.data;
+    .then(function (response) {
+      $scope.jobs.list = response.data;
     }, function (error) {
       console.log('Error getting jobs: ' + jobs);
     });

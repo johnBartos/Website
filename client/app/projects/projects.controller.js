@@ -6,10 +6,11 @@ angular.module('websiteApp')
   $scope.projects.list = [];
 
   activate();
-  function  activate () {
+
+  function activate () {
     $http.get('/api/projects')
-    .then(function (projects){
-      $scope.jobs = projects;
+    .then(function (response) {
+      $scope.projects.list = response.data;
     }, function (error) {
       console.log('Error getting projects: ' + projects);
     });
