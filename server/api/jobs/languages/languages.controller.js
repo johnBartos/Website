@@ -1,12 +1,12 @@
 'use strict';
 
-var db = require('./languages.database');
+var db = require('../../../database/database.js');
 
 exports.get = function (req, res) {
 
   console.log("Getting Languages: " + req.params.jobId);
 
-  db.get(req.params.jobId)
+  db.GetFromCollection(req.params.jobId)
     .then(function (languages) {
       res.json(languages);
     })

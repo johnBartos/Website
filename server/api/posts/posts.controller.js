@@ -1,12 +1,12 @@
 'use strict';
 
-var db = require('./posts.database');
+var db = require('../../database/database.js');
 
 exports.index = function (req, res){
 
   console.log("Getting Posts");
 
-  db.get()
+  db.GetFromCollection('Posts')
   .then(function (posts) {
     res.json(posts);
   })
