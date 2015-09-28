@@ -1,5 +1,3 @@
 'use strict';
 
-var mongoDb = require('./mongoDatabase.js');
-
-module.exports = mongoDb;
+module.exports = require('./mongoDatabase.js');
