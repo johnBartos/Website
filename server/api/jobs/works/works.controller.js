@@ -6,7 +6,7 @@ exports.get = function (req, res) {
 
   console.log("Getting Works: " + req.params.jobId);
 
-  db.GetFromCollection(req.params.jobId)
+  db.FindInCollection('Works', {jobId: req.params.jobId})
     .then(function (works) {
       res.json(works);
     })

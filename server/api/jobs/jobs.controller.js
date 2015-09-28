@@ -20,7 +20,7 @@ exports.get_one = function (req, res){
 
   console.log("Getting Job: " + req.params.jobId);
 
-  db.FindInCollection(req.params.jobId)
+  db.FindInCollection('Jobs', {jobId: req.params.jobId})
     .then(function (job) {
       res.json(job);
     })

@@ -6,7 +6,7 @@ exports.get = function (req, res) {
 
   console.log("Getting Languages: " + req.params.jobId);
 
-  db.GetFromCollection(req.params.jobId)
+  db.FindInCollection('Languages', {jobId: req.params.jobId})
     .then(function (languages) {
       res.json(languages);
     })
