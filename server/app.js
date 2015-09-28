@@ -10,6 +10,12 @@ var app = express();
 require('./config/express')(app);
 require('./routes.js')(app);
 
+require('./database/database.js')
+  .openConnection()
+  .catch(function (reason) {
+    console.log('Couldnt open mongo connection: ' + reason);
+  });
+
 app.listen(config.port);
 console.log('Listening on port ' + config.port + ' ...');
 
