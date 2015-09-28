@@ -1,6 +1,5 @@
 'use strict';
-
-var db = require('../../database/');
+var db = require('database');
 
 exports.index = function (req, res){
 

@@ -10,7 +10,7 @@ var app = express();
 require('./config/express')(app);
 require('./routes.js')(app);
 
-require('./database/')
+require('database')
   .OpenConnection()
   .catch(function (reason) {
     console.log('Couldnt open mongo connection: ' + reason);

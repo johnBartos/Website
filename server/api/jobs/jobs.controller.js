@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require('../../database/');
+var db = require('database');
 
 exports.get_all = function (req, res) {
 
