@@ -1,12 +1,12 @@
 'use strict';
 
-var db = require('./technologies.database');
+var db = require('../../../database/database.js');
 
 exports.get = function (req, res) {
 
   console.log("Getting Technologies: " + req.params.jobId);
 
-  db.get(req.params.jobId)
+  db.GetFromCollection(req.params.jobId)
     .then(function (technologies) {
       res.json(technologies);
     })

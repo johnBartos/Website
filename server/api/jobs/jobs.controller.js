@@ -1,12 +1,12 @@
 'use strict';
 
-var db = require('./jobs.database');
+var db = require('../../database/database.js');
 
 exports.get_all = function (req, res) {
 
   console.log("Getting Jobs");
 
-  db.get_all()
+  db.GetFromCollection('Jobs')
     .then(function (jobs) {
       res.json(jobs);
     })
@@ -20,7 +20,7 @@ exports.get_one = function (req, res){
 
   console.log("Getting Job: " + req.params.jobId);
 
-  db.get(req.params.jobId)
+  db.FindInCollection(req.params.jobId)
     .then(function (job) {
       res.json(job);
     })

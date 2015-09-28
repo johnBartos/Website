@@ -11,7 +11,7 @@ require('./config/express')(app);
 require('./routes.js')(app);
 
 require('./database/database.js')
-  .openConnection()
+  .OpenConnection()
   .catch(function (reason) {
     console.log('Couldnt open mongo connection: ' + reason);
   });
