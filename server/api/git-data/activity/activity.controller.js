@@ -10,7 +10,6 @@ activityController.getActivity = function (req, res) {
   console.log('getting git activity');
 
   var getActivity = function () {
-
     var options = getActivityOptions();
     return rp(options)
     .then(function (activity) {
@@ -22,7 +21,6 @@ activityController.getActivity = function (req, res) {
         reason: reason
       });
     });
-
   };
 
   getActivity();
