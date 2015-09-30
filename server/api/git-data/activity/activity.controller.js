@@ -2,7 +2,10 @@
 
 var rp = require('request-promise');
 var errors = require('request-promise/errors');
+
 var cache = require('./activity.cache.js');
+var parser = require('./activity.parser.js');
+
 
 var activityController = module.exports = {};
 
@@ -17,7 +20,7 @@ activityController.getActivity = function (req, res) {
       .then(function (response) {
         cache.save(response.etag, response.activity);
         res.status(200)
-          .json(response.activity);
+          .json(parser.parse(response.activity));
       })
       .catch(errors.StatusCodeError, function (reason) {
         if (reason.statusCode == '304') {
