@@ -15,14 +15,12 @@
         <h2>Latest Commits</h2>
         <hr>
         <div class = "col-md-12">
-          <div ng-repeat="c in activity.commits | orderBy: '-dateInt' | limitTo: 5" ng-style="{opacity: (1-($index/10))}">
+          <div ng-repeat="c in activity.commits | limitTo: 5" ng-style="{opacity: (1-($index/10))}">
+            <a href = {{c.url}}>
             <div class = "container commit">
-              <a href = {{c.committer_url}}>
-                <div class = "col-md-1 icon">
-                    <img width = "50" height = "50" src = {{c.avatar}} align = "left">
-                </div>
-              </a>
-              <a href = {{c.commit_url}}>
+              <div class = "col-md-1 icon">
+                  <img width = "50" height = "50" src = {{c.avatar_url}} align = "left">
+              </div>
                 <div class = "col-md-11 content">
                   <p>
                     {{c.message}}

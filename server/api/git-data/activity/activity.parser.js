@@ -23,14 +23,14 @@ function parseCommits (pushList) {
 
   for (var push of pushList) {
     var date = push.created_at;
-    var avatar_url = push.avatar_url;
+    var avatar_url = push.actor.avatar_url;
     var repo = push.repo;
 
     for (var commit of push.payload.commits) {
       var formattedCommit = {
         date: moment(date).fromNow(),
         avatar_url: avatar_url,
-        url: commit.url,
+        url: getProperCommitUrl(repo.name, commit.sha),
         message: commit.message,
         repo: repo
     };
@@ -40,4 +40,8 @@ function parseCommits (pushList) {
 }
 
   return parsedCommits;
+}
+
+function getProperCommitUrl (repoName, sha) {
+  return 'https://github.com/' + repoName + '/commit/' + sha;
 }
