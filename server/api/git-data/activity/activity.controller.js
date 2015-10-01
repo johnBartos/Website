@@ -20,7 +20,7 @@ activityController.getActivity = function (req, res) {
       .then(function (response) {
         cache.save(response.etag, response.activity);
         res.status(200)
-          .json(parser.parse(response.activity));
+          .json(response.activity);
       })
       .catch(errors.StatusCodeError, function (reason) {
         if (reason.statusCode == '304') {
@@ -61,7 +61,7 @@ var getActivityOptions = function (etag) {
 
 function getActivityTransform (body, response) {
   return {
-    activity: body,
+    activity: parser.parse(body),
     etag: response.headers.etag
   };
 }
