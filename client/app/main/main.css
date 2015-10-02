@@ -55,8 +55,10 @@ a:active{
 }
 
 .commit{
-  min-height: 52px;
-  max-height: 52px;
+  /*min-height: 52px;*/
+  /*max-height: 52px;*/
+  min-height: 26px;
+  max-height: 26px;
   height: 100%;
   margin: 10px 0px 10px 0px;
   padding-left: 0;
@@ -79,4 +81,16 @@ a:active{
 
 .main-content .about p {
   font-size: 1em;
+}
+
+.event {
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  vertical-align: middle;
+  padding: 0;
+}
+.event .event-header {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0;
 }
