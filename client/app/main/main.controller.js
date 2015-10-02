@@ -8,8 +8,11 @@ angular.module('websiteApp')
   activate();
 
   function activate () {
-    gitService.getActivity()
+    var start = Date.now();
+    gitService.getCommits()
     .then(function (result) {
+      var end = Date.now();
+      console.log('Request time: ' + (end - start) + 'ms');
       $scope.activity.commits = result;
       $scope.$apply();
     })

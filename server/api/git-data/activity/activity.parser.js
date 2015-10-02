@@ -31,8 +31,7 @@ function parseCommits (pushList) {
         date: moment(date).fromNow(),
         avatar_url: avatar_url,
         url: getProperCommitUrl(repo.name, commit.sha),
-        message: commit.message,
-        repo: repo
+        message: commit.message
     };
 
     parsedCommits.push(formattedCommit);

@@ -11,14 +11,10 @@ exports.format = function (blob, n){
     {
       var record = last_commits[i];
       var formatted_commit = {
-        name: record.commit.committer.name,
-        email: record.commit.committer.email,
         date: moment(record.commit.committer.date).fromNow(),
-        dateInt: moment(record.commit.committer.date).unix(),
         message: record.commit.message.trunc(55),
-        commit_url: record.html_url,
-        avatar: record.committer.avatar_url,
-        committer_url: record.committer.html_url
+        url: record.html_url,
+        avatar_url: record.committer.avatar_url
       };
       formatted_commits.push(formatted_commit);
     }
