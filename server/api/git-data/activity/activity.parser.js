@@ -5,42 +5,55 @@ var moment = require('moment');
 var parser = module.exports = {};
 
 parser.parse = function (activityList) {
-  var commits = getCommits(JSON.parse(activityList));
+  var commits = getPushesFromActivityList(JSON.parse(activityList));
 
   console.log(commits);
 
-  return parseCommits(commits);
+  return parsePushEvents(commits);
 };
 
-function getCommits (activityJson) {
+function getPushesFromActivityList (activityJson) {
   return activityJson.filter(function (activity) {
      return activity.type == 'PushEvent';
    });
 }
 
-function parseCommits (pushList) {
-  var parsedCommits = [];
+function parsePushEvents (pushList) {
+  var parsedPushEvents = [];
 
   for (var push of pushList) {
-    var date = push.created_at;
-    var avatar_url = push.actor.avatar_url;
-    var repo = push.repo;
-
-    for (var commit of push.payload.commits) {
-      var formattedCommit = {
-        date: moment(date).fromNow(),
-        avatar_url: avatar_url,
-        url: getProperCommitUrl(repo.name, commit.sha),
-        message: commit.message
-    };
-
-    parsedCommits.push(formattedCommit);
+    var formattedPush = formatPush(push);
+    parsedPushEvents.push(formattedPush);
   }
+
+  return parsedPushEvents;
 }
 
-  return parsedCommits;
+function formatPush (push) {
+  var formattedPush = {
+    date: moment(push.created_at).fromNow(),
+    avatar_url: push.actor.avatar_url,
+    repo: {
+      name: push.repo.name,
+      url: createProperRepoUrl(push.repo.name)
+    },
+    commits: []
+  };
+
+  for (var commit of push.payload.commits) {
+    var formattedCommit = {
+      url: createProperCommitUrl(push.repo.name, commit.sha),
+      message: commit.message
+    };
+    formattedPush.commits.push(formattedCommit);
+  }
+  return formattedPush;
 }
 
-function getProperCommitUrl (repoName, sha) {
+function createProperRepoUrl (repoName) {
+  return 'https://github.com/' + repoName;
+}
+
+function createProperCommitUrl (repoName, sha) {
   return 'https://github.com/' + repoName + '/commit/' + sha;
 }
