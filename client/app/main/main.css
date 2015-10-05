@@ -1,3 +1,12 @@
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#000000;
+  height: 1px !important;
+}
+
 .centered{
   text-align: center;
 }
@@ -14,6 +23,8 @@
 
 .icon{
   padding:0px 0px 12px 0px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .right {
@@ -86,8 +97,13 @@ a:active{
   text-align: left;
   vertical-align: bottom;
   padding: 0;
+  margin: 0;
 }
 
 .event-header > h4{
   margin: 0;
+}
+
+.bullet {
+  padding-left: 0;
 }

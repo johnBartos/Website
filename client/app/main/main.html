@@ -5,13 +5,13 @@
 <div class="jumbotron main-content centered">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 about">
+      <div class="col-md-offset-1 col-md-10 col-md-offset-1 about">
           <h2>Hello, World!</h2>
           <hr>
           <p>I'm John, and this is my 40 acres on the windswept hearth of the internet. I'm a Software Engineer living in New Jersey and
               employed by DataOnline LLC, where I program primarily in C# and JavaScript. Currently, I'm working on transforming our monolith SOA into a Microservice-based architecture. I graduated from Rutgers in 2014 with a degree in Electrical and Computer Engineering; originally, I went in for hardware but somehow ended up specializing in software. In addition to enjoying free-hand programming, in my spare time I like to kayak, mountain bike, loose at MTG, 3D print things.</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-offset-1 col-md-10">
         <h2>Latest Commit</h2>
         <hr>
 
@@ -19,29 +19,36 @@
           <div class="row">
             <div class="col-md-12">
 
-              <div class="container event-header">
-                <div class="col-md-1 icon">
-                    <img width="50" height="50" ng-src="{{activity.event.avatar_url}}" align="left">
-                </div>
-                <div class="col-md-11">
-                  <h4 class="card-title">Pushed to <a ng-href="{{activity.event.repo.url}}"><span ng-bind="activity.event.repo.name"></span></a> <span ng-bind="activity.event.date"></span></h4>
+            <div class="container event-header">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-2 icon">
+                      <img width="60" height="60" ng-src="{{activity.event.avatar_url}}" align="left">
+                  </div>
+                  <div class="col-md-10">
+                    <h4 class="card-title">Pushed to <a ng-href="{{activity.event.repo.url}}"><span ng-bind="activity.event.repo.name"></span></a> <span ng-bind="activity.event.date"></span></h4>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="event-payload">
+            <div class="container event-payload">
+              <div class="row">
+                <div class="col-md-12 event-payload">
 
-                <div ng-repeat="c in activity.event.commits">
-                  <!-- <div class="row"> -->
-                    <div class="col-md-1">
-                      <span class="glyphicon glyphicon-saved"></span>
-                    </div>
-                    <div class="col-md-11 commit">
-                      <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
-                    </div>
-                  <!-- </div> -->
+                  <div ng-repeat="c in activity.event.commits">
+                      <div class="col-md-1 bullet">
+                        <span class="glyphicon glyphicon-saved"></span>
+                      </div>
+                      <div class="col-md-11 commit">
+                        <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
+                      </div>
+                  </div>
+
                 </div>
-
               </div>
+            </div>
+
             </div>
           </div>
         </div>
