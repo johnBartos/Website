@@ -60,22 +60,15 @@ a:active{
   min-height: 26px;
   max-height: 26px;
   height: 100%;
-  margin: 10px 0px 10px 0px;
+  /*margin: 0px 10px 10px 0px;*/
   padding-left: 0;
   overflow: hidden;
   border: 1px solid #DDD;
   border-radius: 5px;
+  text-align: center;
 }
 
-.commit > .icon img{
-  vertical-align: middle;
-  padding: 0;
-  border-right: 1px solid #DDD;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.commit  .content > p {
+.commit .content > p {
   font-size: 1em;
 }
 
@@ -89,8 +82,12 @@ a:active{
   vertical-align: middle;
   padding: 0;
 }
-.event .event-header {
+.event-header {
   text-align: left;
-  vertical-align: middle;
+  vertical-align: bottom;
   padding: 0;
+}
+
+.event-header > h4{
+  margin: 0;
 }

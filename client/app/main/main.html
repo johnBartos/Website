@@ -2,52 +2,43 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/main/main.css" />
 
-<div class = "jumbotron main-content centered">
-  <div class = "container">
-    <div class = "row">
-      <div class = "col-md-6 about">
+<div class="jumbotron main-content centered">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 about">
           <h2>Hello, World!</h2>
           <hr>
           <p>I'm John, and this is my 40 acres on the windswept hearth of the internet. I'm a Software Engineer living in New Jersey and
               employed by DataOnline LLC, where I program primarily in C# and JavaScript. Currently, I'm working on transforming our monolith SOA into a Microservice-based architecture. I graduated from Rutgers in 2014 with a degree in Electrical and Computer Engineering; originally, I went in for hardware but somehow ended up specializing in software. In addition to enjoying free-hand programming, in my spare time I like to kayak, mountain bike, loose at MTG, 3D print things.</p>
       </div>
-      <div class = "col-md-6">
+      <div class="col-md-6">
         <h2>Latest Commit</h2>
         <hr>
 
-        <div class = "container event">
-          <div ng-repeat="e in activity.events | limitTo: 1" ng-style="{opacity: (1-($index/10))}">
-            <div class = "row">
-              <div class = "col-md-12">
+        <div class="container event">
+          <div class="row">
+            <div class="col-md-12">
 
-                <div class = "container event-header">
-                  <div class = "col-md-1 icon">
-                      <img width = "50" height = "50" src = {{e.avatar_url}} align = "left">
-                  </div>
-                  <div class = "col-md-11">
-                    <h4> Pushed to <a href = {{e.repo.url}}>{{e.repo.name}} {{e.date}} </a> </h4>
-                  <div>
+              <div class="container event-header">
+                <div class="col-md-1 icon">
+                    <img width="50" height="50" ng-src="{{activity.event.avatar_url}}" align="left">
                 </div>
+                <div class="col-md-11">
+                  <h4 class="card-title">Pushed to <a ng-href="{{activity.event.repo.url}}"><span ng-bind="activity.event.repo.name"></span></a> <span ng-bind="activity.event.date"></span></h4>
+                </div>
+              </div>
 
-                <div class = "container event-payload">
-                  <div class = "col-md-12 event-payload">
-                    <div ng-repeat= "c in e.commits">
+              <div class="event-payload">
 
-                      <div class = "row">
-                        <a href = {{c.url}}>
-                          <div class = "col-md-12 commit">
-                            <div  class = "col-md-12 content">
-                              <p>
-                                {{c.message}}
-                              </p>
-                            </div>
-                            </a>
-                          </div>
-                        </a>
-
-                      </div>
+                <div ng-repeat="c in activity.event.commits">
+                  <!-- <div class="row"> -->
+                    <div class="col-md-1">
+                      <span class="glyphicon glyphicon-saved"></span>
                     </div>
-                  </div>
+                    <div class="col-md-11 commit">
+                      <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
+                    </div>
+                  <!-- </div> -->
                 </div>
 
               </div>

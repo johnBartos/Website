@@ -4,6 +4,7 @@ angular.module('websiteApp')
 .controller('MainController', function ($scope, $http, gitService) {
   $scope.activity = {};
   $scope.activity.events = [];
+  $scope.activity.event = {};
 
   activate();
 
@@ -14,6 +15,7 @@ angular.module('websiteApp')
       var end = Date.now();
       console.log('Request time: ' + (end - start) + 'ms');
       $scope.activity.events = result;
+      $scope.activity.event = result[0];
       $scope.$apply();
     })
     .catch (function (reason) {
