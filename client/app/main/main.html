@@ -11,19 +11,18 @@
           <p>I'm John, and this is my 40 acres on the windswept hearth of the internet. I'm a Software Engineer living in New Jersey and
               employed by DataOnline LLC, where I program primarily in C# and JavaScript. Currently, I'm working on transforming our monolith SOA into a Microservice-based architecture. I graduated from Rutgers in 2014 with a degree in Electrical and Computer Engineering; originally, I went in for hardware but somehow ended up specializing in software. In addition to enjoying free-hand programming, in my spare time I like to kayak, mountain bike, loose at MTG, 3D print things.</p>
       </div>
-    <!-- </div> -->
     <!-- </div>
   </div>
 </div>
 
-<div class="container"> -->
-  <!-- <div class="row"> -->
-    <div class="col-md-6 event">
-      <h2>Latest Activity</h2>
-      <hr>
-      <carousel interval="5000" no-wrap="noWrapSlides">
+<div class="container">
+  <div class="row"> -->
+    <div class="col-md-6">
+      <!-- <h2>Latest Activity</h2>
+      <hr> -->
+      <carousel interval="10000" no-wrap="false">
 
-        <slide ng-repeat="e in activity.events"
+        <slide ng-repeat="e in activity.events">
           <div class="row event-header">
             <div class="col-md-2 icon">
                 <img width="60" height="60" ng-src="{{activity.event.avatar_url}}" align="left">
@@ -48,12 +47,11 @@
             </div>
 
           </div>
-
-        </carousel>
+        </slide>
+      </carousel>
 
       </div>
 
     </div>
-
   </div>
-</div>
+  </div>

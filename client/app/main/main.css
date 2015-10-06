@@ -16,19 +16,10 @@ hr {
   word-wrap:break-word;
 }
 
-.left{
-  background-color: #DDD;
-  min-height: 250px;
-}
-
 .icon{
   padding:0px 0px 12px 0px;
   border-radius: 5px;
   overflow: hidden;
-}
-
-.right {
-  text-align: right;
 }
 
 .main-content{

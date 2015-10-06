@@ -33,3 +33,6 @@ body {
 .navbar {
   margin-bottom: 0;
 }
+
+/*Fix required for angular-bootstrap*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
