@@ -16,15 +16,28 @@ hr {
   word-wrap:break-word;
 }
 
-.icon{
+.icon {
   padding:0px 0px 12px 0px;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .main-content{
-  background-color: #fff;
+  margin-top: 50px;
   margin-bottom: 0px;
+}
+
+.left {
+  background-image: none !important;
+  visibility: hidden !important;
+}
+
+.right {
+  background-image: none !important;
+  visibility: hidden !important;
+}
+.carousel-indicators {
+  visibility: hidden !important;
 }
 
 
@@ -39,21 +52,6 @@ hr {
 
 .icon-bar{
   margin-bottom:50px;
-}
-
-a:link{
-  color: #000;
-}
-
-a:visited{
-  color: #000;
-}
-
-a:hover {
-  color: #373C45;
-}
-a:active{
-  color: #000;
 }
 
 .commit{
@@ -74,15 +72,17 @@ a:active{
   font-size: 1em;
 }
 
-.main-content .about p {
-  font-size: 1em;
+.about h4 {
+  margin: 0;
 }
+
 
 .event {
   border: 1px solid #DDD;
   border-radius: 5px;
   vertical-align: middle;
   padding: 0;
+  margin-top: 25px;
 }
 .event-header {
   text-align: left;
@@ -91,7 +91,7 @@ a:active{
   margin: 0;
 }
 
-.event-header > h4{
+.event-header h4 {
   margin: 0;
 }
 

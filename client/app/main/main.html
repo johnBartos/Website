@@ -2,56 +2,55 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/main/main.css" />
 
-<div class="jumbotron main-content centered">
-  <div class="container">
+  <div class="container main-content centered">
     <div class="row">
-      <div class="col-md-6 about">
-          <h2>Hello, World!</h2>
+      <div class="col-md-offset-3 col-md-6 col-md-offset-3 about">
+          <h4>Hello, World!</h4>
           <hr>
           <p>I'm John, and this is my 40 acres on the windswept hearth of the internet. I'm a Software Engineer living in New Jersey and
               employed by DataOnline LLC, where I program primarily in C# and JavaScript. Currently, I'm working on transforming our monolith SOA into a Microservice-based architecture. I graduated from Rutgers in 2014 with a degree in Electrical and Computer Engineering; originally, I went in for hardware but somehow ended up specializing in software. In addition to enjoying free-hand programming, in my spare time I like to kayak, mountain bike, loose at MTG, 3D print things.</p>
       </div>
-    <!-- </div>
-  </div>
-</div>
+    </div>
 
-<div class="container">
-  <div class="row"> -->
-    <div class="col-md-6">
-      <!-- <h2>Latest Activity</h2>
-      <hr> -->
-      <carousel interval="10000" no-wrap="false">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 col-md-offset-3 event">
+        <!-- <h2>Latest Activity</h2>
+        <hr> -->
+        <carousel interval="10000" no-wrap="false">
 
-        <slide ng-repeat="e in activity.events">
-          <div class="row event-header">
-            <div class="col-md-2 icon">
-                <img width="60" height="60" ng-src="{{activity.event.avatar_url}}" align="left">
-            </div>
-            <div class="col-md-10">
-              <h4 class="card-title">Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
-              <hr>
-            </div>
-          </div>
-
-          <div class="col-md-12 event-payload">
-
-              <div ng-repeat="c in e.commits">
-                <div class="row">
-                  <div class="col-md-1 bullet">
-                    <span class="glyphicon glyphicon-saved"></span>
-                  </div>
-                  <div class="col-md-11 commit">
-                    <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
-                  </div>
+          <slide ng-repeat="e in activity.events">
+            <div class="row event-header">
+              <div class="col-md-2 icon">
+                  <img width="60" height="60" ng-src="{{activity.event.avatar_url}}" align="left">
+              </div>
+              <div class="col-md-10">
+                <h4 class="card-title">Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
+                <hr>
               </div>
             </div>
 
-          </div>
-        </slide>
-      </carousel>
+            <div class="col-md-12 event-payload">
+
+                <div ng-repeat="c in e.commits">
+                  <div class="row">
+                    <div class="col-md-1 bullet">
+                      <span class="glyphicon glyphicon-saved"></span>
+                    </div>
+                    <div class="col-md-11 commit">
+                      <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </slide>
+        </carousel>
 
       </div>
 
     </div>
   </div>
-  </div>
+</div>
+
+</div>
