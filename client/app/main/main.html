@@ -21,33 +21,38 @@
     <div class="col-md-6 event">
       <h2>Latest Activity</h2>
       <hr>
+      <carousel interval="5000" no-wrap="noWrapSlides">
 
+        <slide ng-repeat="e in activity.events"
           <div class="row event-header">
             <div class="col-md-2 icon">
                 <img width="60" height="60" ng-src="{{activity.event.avatar_url}}" align="left">
             </div>
             <div class="col-md-10">
-              <h4 class="card-title">Pushed to <a ng-href="{{activity.event.repo.url}}"><span ng-bind="activity.event.repo.name"></span></a> <span ng-bind="activity.event.date"></span></h4>
+              <h4 class="card-title">Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
               <hr>
             </div>
           </div>
 
-            <div class="col-md-12 event-payload">
+          <div class="col-md-12 event-payload">
 
-                <div ng-repeat="c in activity.event.commits">
-                  <div class="row">
-                    <div class="col-md-1 bullet">
-                      <span class="glyphicon glyphicon-saved"></span>
-                    </div>
-                    <div class="col-md-11 commit">
-                      <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
-                    </div>
-                </div>
+              <div ng-repeat="c in e.commits">
+                <div class="row">
+                  <div class="col-md-1 bullet">
+                    <span class="glyphicon glyphicon-saved"></span>
+                  </div>
+                  <div class="col-md-11 commit">
+                    <a ng-href="{{c.url}}"><span ng-bind="c.message"></span></a>
+                  </div>
               </div>
-
             </div>
 
+          </div>
+
+        </carousel>
+
       </div>
+
     </div>
 
   </div>
