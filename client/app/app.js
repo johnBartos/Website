@@ -2,7 +2,8 @@
 
 angular.module('websiteApp', [
 'ngResource',
-'ui.router'
+'ui.router',
+'ui.bootstrap'
 ])
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider){
   $urlRouterProvider
