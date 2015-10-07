@@ -71,18 +71,26 @@ hr {
   cursor: default !important;
 }
 
-.carousel .left {
+.carousel-control {
   background-image: none !important;
   visibility: hidden !important;
+  height: 43px !important;
+  width: 350px !important;
+  text-align: left !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
 }
 
-.carousel .right {
-  background-image: none !important;
-  visibility: hidden !important;
+.carousel-control span{
+  line-height: 0px !important;
+  font-size: medium !important;
+  color: #DDD;
 }
+
 .carousel .carousel-indicators {
   visibility: hidden !important;
 }
+
 
 .commit {
   min-height: 26px;
