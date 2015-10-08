@@ -59,7 +59,10 @@ hr {
 }
 
 .bullet {
-  /*padding-left: 0;*/
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 28px;
+  line-height: 28px;
 }
 
 .event .title {
@@ -92,15 +95,15 @@ hr {
 }
 
 .commit {
-  min-height: 26px;
-  max-height: 26px;
   height: 100%;
   margin: 0px 0px 10px 0px;
   overflow: hidden;
   border: 1px solid #DDD;
   border-radius: 5px;
-  text-align: center;
   color: #000;
+  line-height:28px;
+  height:28px;
+  font-size:14px;
 }
 
 .commit:hover {
