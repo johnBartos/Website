@@ -7,14 +7,8 @@ hr {
   height: 1px !important;
 }
 
-.centered{
+.centered {
   text-align: center;
-}
-
-.icon {
-  padding:0px 0px 12px 0px;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
 .main-content{
@@ -36,8 +30,6 @@ hr {
 .about .about-content {
   text-align: justify;
 }
-
-
 
 .event {
   /*border: 1px solid #DDD;*/
@@ -84,7 +76,7 @@ hr {
   opacity: 1 !important;
 }
 
-.carousel-control span{
+.carousel-control span {
   line-height: 0px !important;
   font-size: medium !important;
   color: #DDD;
@@ -98,7 +90,7 @@ hr {
   height: 100%;
   margin: 0px 0px 10px 0px;
   overflow: hidden;
-  border: 1px solid #DDD;
+  border: 1px solid #999;
   border-radius: 5px;
   color: #000;
   line-height:28px;
