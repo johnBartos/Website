@@ -2,65 +2,50 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/main/main.css" />
 
-  <div class="container main-content centered">
+<div class="jumbotron main-header">
+  <div class="container centered">
     <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-md-offset-2 about">
-        <div class="row about-header">
-          <h4>Hello, World!</h4>
-          <hr>
-        </div>
-        <div class="row about-content">
-          <p>I'm John, and I like to program.
-
-              <!-- I'm a Software Engineer living in New Jersey and
-              employed by DataOnline LLC, where I create awesome code with C# and JavaScript.
-               Currently, I'm working on transforming our monolith SOA into a Microservice-based architecture and leading the charge for a new HTML5 website.
-               I have a strong engineering personality and do my best to foster a culture of software excellence within our team.
-
-              I have a 3D printer and love to make useless trinkets with it. Being outdoors is great - biking and kayaking are my go-to alternative modes of transportation. I'm really into sci-fi  -->
-
-              </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2 event">
-
-          <carousel interval="10000" no-wrap="false">
-
-            <slide ng-repeat="e in activity.events">
-              <div class="row event-header">
-                <div class="col-md-12 title centered">
-                  <h4>Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
-                  <hr>
-                </div>
-              </div>
-
-              <div class="col-md-12 event-content">
-
-                  <div ng-repeat="c in e.commits">
-                    <div class="row">
-                      <div class="col-xs-1 bullet">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                      </div>
-                      <a ng-href="{{c.url}}">
-                        <div class="col-xs-11 commit">
-                          <span ng-bind="c.message"></span>
-                        </div>
-                      </a>
-                  </div>
-                </div>
-
-              </div>
-            </slide>
-          </carousel>
-
-        </div>
-
+      <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+          <h1>I'm John Bartos.</h1>
+          <h3>And I like to make things.</h3>
       </div>
     </div>
   </div>
+</div>
 
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2 event">
+
+      <carousel interval="10000" no-wrap="false">
+
+        <slide ng-repeat="e in activity.events">
+          <div class="row event-header">
+            <div class="col-md-12 title centered">
+              <h4>Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
+              <hr>
+            </div>
+          </div>
+
+          <div class="col-md-12 event-content">
+
+              <div ng-repeat="c in e.commits">
+                <div class="row">
+                  <div class="col-xs-1"></div>
+                  <a ng-href="{{c.url}}">
+                    <div class="col-xs-10 commit">
+                      <span ng-bind="c.message"></span>
+                    </div>
+                  </a>
+                  <div class="col-xs-1"></div>
+              </div>
+            </div>
+
+          </div>
+        </slide>
+      </carousel>
+
+    </div>
+
+  </div>
 </div>

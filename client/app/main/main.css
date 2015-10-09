@@ -11,32 +11,38 @@ hr {
   text-align: center;
 }
 
-.main-content{
-  margin-top: 100px;
+.main-header {
+  background-color: #FFF;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 56px;
+  margin-bottom: 112px;
+}
+
+.main-header h1 {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.main-header h3 {
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.about {
-  margin-bottom: 100px;
-}
-.about h4 {
-  margin: 0;
-}
-
-.about p {
-  margin: 0;
-}
-
-.about .about-content {
-  text-align: justify;
+.main-content{
+  margin-bottom: 0px;
 }
 
 .event {
-  /*border: 1px solid #DDD;*/
   border-radius: 5px;
   vertical-align: middle;
   padding: 0;
-  margin-top: 25px;
+  margin-top: 0px;
+}
+
+.event .title {
+  margin: 0;
+  padding: 0;
 }
 
 .event-header {
@@ -57,34 +63,32 @@ hr {
   line-height: 28px;
 }
 
-.event .title {
-  margin: 0;
-  padding: 0;
-}
+
 
 .carousel {
   cursor: default !important;
 }
 
-.carousel-control {
-  background-image: none !important;
-  visibility: hidden !important;
-  height: 43px !important;
-  width: 350px !important;
-  text-align: left !important;
-  text-shadow: none !important;
+.carousel .carousel-control {
+  /*background-image: none !important;
   opacity: 1 !important;
-}
-
-.carousel-control span {
-  line-height: 0px !important;
-  font-size: medium !important;
-  color: #DDD;
+  height: 36px !important;
+  line-height: 36px !important;*/
+  visibility: hidden !important;
 }
 
 .carousel .carousel-indicators {
   visibility: hidden !important;
+  /*height: 10px !important;
+  line-height: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;*/
 }
+
+/*.carousel .carousel-indicators li {
+  color: #000 !important;
+  background-color: #000 !important;
+}*/
 
 .commit {
   height: 100%;
@@ -95,7 +99,6 @@ hr {
   color: #000;
   line-height:28px;
   height:28px;
-  font-size:14px;
 }
 
 .commit:hover {
