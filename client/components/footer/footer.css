@@ -2,9 +2,9 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  /*height: 50px;*/
   background-color: #FFF;
   text-align: center;
+  border-top: 1px solid #DDD;
 }
 
 .footer hr {
@@ -12,7 +12,7 @@
   clear:both;
   display:block;
   width: 100%;
-  background-color:#eee;
+  background-color:#DDD;
   height: 1px;
   margin: 0px;
 }
