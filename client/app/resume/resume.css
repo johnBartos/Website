@@ -1,4 +1,4 @@
-.frame{
+.frame {
   text-align:center;
 }
 
@@ -9,4 +9,19 @@ hr {
   width: 100%;
   background-color:#000000;
   height: 1px;
+}
+
+.resume-download {
+  float: right;
+
+}
+
+.resume-download .glyphicon {
+  height: 39px;
+  line-height: 39px;
+  color: black;
+}
+
+.resume-download .glyphicon:hover {
+  color: #4d5460;
 }
