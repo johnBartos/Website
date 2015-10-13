@@ -10,15 +10,12 @@
 <div class = "container">
   <div class = "row">
     <div ng-repeat="p in projects.list">
-      <div class = "col-md-offset-2 col-md-8 proj col-md-offset-2">
-            <h2> {{p.Name}} </h2>
-            <p>{{p.Description}}</p>
-            <div ng-if="p.Link">
-              <a ng-href = "{{p.Link}}">
-                <i class="fa-angle-double-right"></i> See it on Github
-              </a>
-            </div>
-            <hr>
+      <div class = "col-md-offset-2 col-md-8 col-md-offset-2 proj">
+       <a ng-href = "{{p.Link}}">
+         <h2>{{p.Name}}</h2>
+          <p>{{p.Description}}</p>
+        </a>
+        <hr>
       </div>
     </div>
   </div>
