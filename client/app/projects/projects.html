@@ -2,16 +2,16 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/projects/projects.css" />
 
-<div class = "container">
+<div class="container">
   <h1>Projects</h1>
   <hr>
 </div>
 
-<div class = "container">
-  <div class = "row">
+<div class="container">
+  <div class="row">
     <div ng-repeat="p in projects.list">
-      <div class = "col-md-offset-2 col-md-8 col-md-offset-2 proj">
-       <a ng-href = "{{p.Link}}">
+      <div class="col-md-offset-2 col-md-8 col-md-offset-2 proj">
+       <a ng-href="{{p.Link}}">
          <h2>{{p.Name}}</h2>
           <p>{{p.Description}}</p>
         </a>
