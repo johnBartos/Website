@@ -20,6 +20,7 @@ hr {
   height: 39px;
   line-height: 39px;
   color: black;
+  vertical-align: text-top;
 }
 
 .resume-download .glyphicon:hover {
