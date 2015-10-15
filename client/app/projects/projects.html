@@ -11,11 +11,9 @@
   <div class="row">
     <div ng-repeat="p in projects.list">
       <div class="col-md-offset-2 col-md-8 col-md-offset-2 proj">
-       <a ng-href="{{p.Link}}">
-         <!-- <h2>{{p.Name}} <span ng-if="p.Link"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></span></h2> -->
          <h2>{{p.Name}}</h2>
+          <span ng-if="p.Link"><a ng-href="{{p.Link}}"><h5 class="text-muted">Project Page <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></h5></a></span>
           <p>{{p.Description}}</p>
-        </a>
         <hr>
       </div>
     </div>

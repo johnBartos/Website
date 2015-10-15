@@ -27,9 +27,10 @@ hr {
   text-decoration: none;
 }
 
-/*.proj .glyphicon {
-  line-height: 33px;
-  height: 33px;
-  vertical-align: text-top;
-  font-size: small;
-}*/
+.proj h5 {
+  margin-bottom: 15px;
+}
+
+.proj .glyphicon {
+  font-size: x-small;
+}
