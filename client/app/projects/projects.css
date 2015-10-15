@@ -12,21 +12,6 @@ hr {
     height: 1px;
 }
 
-.proj a {
-  color: black;
-  text-decoration: none;
-}
-
-.proj a:hover {
-  color: #4d5460;
-  text-decoration: none;
-}
-
-.proj a:active {
-  color: black;
-  text-decoration: none;
-}
-
 .proj .glyphicon {
   font-size: x-small;
 }
