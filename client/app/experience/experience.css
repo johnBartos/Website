@@ -1,11 +1,3 @@
-.centered {
-  text-align: center;
-}
-
-.bordered {
-    border: 1px solid black;
-}
-
 hr {
   border: 0;
   clear:both;
@@ -20,31 +12,6 @@ hr {
   height: 1px;
 }
 
-.panel > .panel-heading {
-  background-image: none;
-  background-color: #4C535F;
-  color: white;
-}
-
-
-.job a {
-  color: black;
-  text-decoration: none;
-}
-
-.job a:hover {
-  color: #4d5460;
-  text-decoration: none;
-}
-
-.job a:active {
-  color: black;
-  text-decoration: none;
-}
-
 .job .glyphicon {
-  line-height: 33px;
-  height: 33px;
-  vertical-align: text-top;
-  font-size: large;
+  font-size: x-small;
 }

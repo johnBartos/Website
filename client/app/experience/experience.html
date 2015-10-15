@@ -12,11 +12,9 @@
   <div class = "row">
     <div ng-repeat="j in jobs.list">
       <div class = "col-md-offset-2 col-md-8 col-md-offset-2 job">
-        <a ng-href = "experience/jobs/{{j.jobId}}">
-          <h2>{{j.Name}} <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></h2>
-          <h5 class = "text-muted"> {{j.Date}}</h5>
+          <h2>{{j.Name}}</h2>
+          <a ng-href = "experience/jobs/{{j.jobId}}"><h5 class="text-muted">Job Page <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></h5></a>
           <p>{{j.Description}}</p>
-        </a>
         <hr>
       </div>
     </div>
