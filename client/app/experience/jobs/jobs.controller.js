@@ -5,15 +5,14 @@ angular.module('websiteApp')
 
   $scope.job = {};
 
-  $scope.$apply(
-    activate()
-  );
+  activate();
 
   function activate () {
      jobService.getJob($stateParams.jobId)
      .then(function (result) {
        $scope.job = result;
        masonryDelay();
+       $scope.$apply();
      })
      .catch(function (reason) {
        console.log(reason);
@@ -23,7 +22,6 @@ angular.module('websiteApp')
    function masonryDelay()
    {
      setTimeout(function () {
-       $scope.$apply();
        $(".masonry-container").masonry({
            itemSelector: ".item",
            columnWidth: ".item"
