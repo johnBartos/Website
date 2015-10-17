@@ -6,16 +6,16 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-md-12 overview">
-      <h1>{{Job.About.Name}}</h1>
+      <h1>{{job.about.Name}}</h1>
       <hr class = "title">
       <div class = "col-md-12 information">
-        <h5 class = "text-muted"> {{Job.About.Date}}, {{Job.About.Location}} <br> {{Job.About.Position}} </h5>
+        <h5 class = "text-muted"> {{job.about.Date}}, {{job.about.Location}} <br> {{job.about.Position}} </h5>
       </div>
       <div class = "col-md-12 summary">
         <ul class="list-unstyled icon-list bullet">
-          <li> <div class = "descriptor">Description</div> <p> {{Job.About.Description}} </p> </li>
-          <li> <div class = "descriptor">Environment</div>{{Job.About.Environment}} </p> </li>
-          <li class = "last"> <div class = "descriptor">Responsibilities</div>{{Job.About.Responsibilities}} </p> </li>
+          <li> <div class = "descriptor">Description</div> <p> {{job.about.Description}} </p> </li>
+          <li> <div class = "descriptor">Environment</div>{{job.about.Environment}} </p> </li>
+          <li class = "last"> <div class = "descriptor">Responsibilities</div>{{job.about.Responsibilities}} </p> </li>
         </ul>
       </div>
     </div>
@@ -33,7 +33,7 @@
 
 <div class = "container">
   <div class="row masonry-container">
-    <div ng-repeat="w in Job.Works">
+    <div ng-repeat="w in job.works">
       <div class = "col-md-4 item">
         <div class = "panel panel-default tile data-trigger="hover"">
           <div class = "panel-heading">
@@ -84,7 +84,7 @@
 
 <div class = "container">
   <div class="row">
-    <div ng-repeat="t in Job.Technologies">
+    <div ng-repeat="t in job.technologies">
       <div class="col-md-2">
         <div class = "panel panel-default">
           <div class = "panel-body centered">
@@ -108,7 +108,7 @@
 
 <div class = "container">
   <div class="row">
-    <div ng-repeat="l in Job.Languages">
+    <div ng-repeat="l in job.languages">
       <div class="col-md-2">
         <div class = "panel panel-default">
           <div class = "panel-body centered">
