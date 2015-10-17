@@ -5,28 +5,30 @@ angular.module('websiteApp')
 
   $scope.job = {};
 
-  activate();
+  $scope.$apply(
+    activate()
+  );
 
   function activate () {
-
      jobService.getJob($stateParams.jobId)
      .then(function (result) {
        $scope.job = result;
-       $scope.$apply();
+       masonryDelay();
      })
      .catch(function (reason) {
        console.log(reason);
      });
+   }
 
-
-    // Hack for getting Masonry to work
-    // setTimeout(function () {
-    //   $(".masonry-container").masonry({
-    //       itemSelector: ".item",
-    //       columnWidth: ".item"
-    //   });
-    // }, 200);
-
-  }
+   function masonryDelay()
+   {
+     setTimeout(function () {
+       $scope.$apply();
+       $(".masonry-container").masonry({
+           itemSelector: ".item",
+           columnWidth: ".item"
+       });
+     }, 100);
+   }
 
 });
