@@ -11,9 +11,7 @@ angular.module('websiteApp')
 
      jobService.getJob($stateParams.jobId)
      .then(function (result) {
-       console.log(result);
        $scope.job = result;
-       console.log($scope.job);
        $scope.$apply();
      })
      .catch(function (reason) {

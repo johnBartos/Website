@@ -3,13 +3,6 @@
 angular.module('websiteApp')
   .service('jobService', function ($http, $q) {
 
-    // var Job = {};
-    // Job.About = {};
-    // Job.Projects = [];
-    // Job.Languages = [];
-    // Job.Technologies = [];
-    // Job.Works = [];
-
     this.getJob = function (jobId)
     {
       var endpoints = [
@@ -22,7 +15,6 @@ angular.module('websiteApp')
       return new Promise(function (resolve, reject) {
         $q.all(endpoints)
           .then(function (result) {
-            console.log(result);
               var parsedData = parseResult(result);
               resolve(parsedData);
           })
