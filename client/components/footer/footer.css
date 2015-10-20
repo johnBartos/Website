@@ -19,10 +19,12 @@
 
 .footer > .icon-link{
   text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .footer .icon-link:hover{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .footer .icon-link > i{
