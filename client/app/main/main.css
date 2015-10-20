@@ -63,32 +63,39 @@ hr {
   line-height: 28px;
 }
 
-
-
 .carousel {
-  cursor: default !important;
+  cursor: default;
+}
+
+.carousel:hover .carousel-control {
+  visibility: visible;
 }
 
 .carousel .carousel-control {
-  /*background-image: none !important;
-  opacity: 1 !important;
-  height: 36px !important;
-  line-height: 36px !important;*/
-  visibility: hidden !important;
+  cursor: pointer;
+  background-image: none;
+  opacity: 0.5;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  visibility: hidden;
+}
+
+.carousel .carousel-control .glyphicon {
+  font-size: medium;
+}
+
+.carousel .right {
+  width: 16px;
+}
+
+.carousel .left {
+  width: 16px;
 }
 
 .carousel .carousel-indicators {
   visibility: hidden !important;
-  /*height: 10px !important;
-  line-height: 10px !important;
-  margin: 0 !important;
-  padding: 0 !important;*/
 }
-
-/*.carousel .carousel-indicators li {
-  color: #000 !important;
-  background-color: #000 !important;
-}*/
 
 .commit {
   height: 100%;
@@ -99,6 +106,7 @@ hr {
   color: #000;
   line-height:28px;
   height:28px;
+  cursor: pointer;
 }
 
 .commit:hover {
