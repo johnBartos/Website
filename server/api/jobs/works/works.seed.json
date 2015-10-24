@@ -1,6 +1,49 @@
 [
   {
     "jobId": ["dataonline"],
+    "Name": "Readings Service",
+    "Problem": "Generating a Reading, the business object representingsensor data sent from an RTU, is coupled to thetranslation of the underlying communications protocol, causing developers to re-implement large amounts of codeacross several services",
+    "Solution":"Develop new microservice which generates Readings agnostic of RTUcommunications protocol",
+    "Result": ["Established a single source of truth for Readingsby consolidating seven individual implementationsinto one, resulting in a significant    simplification of backend architecture",
+      "Eliminated the need to re-implement Reading generation logic when integrating a new RTU protocol, reducing developer time spent on boilerplate code",
+      "Decoupled communications protocol translation from reading generation, enabling construction of a new microservice which centralizes protocol translation code",
+     "Minimized time spent solving bugs by centralizing location of readings generation code"]
+  },
+  {
+    "jobId": ["dataonline"],
+    "Name": "Publisher Service",
+    "Problem": "Our inter-service communication frameworkrequires producers to explicitly know about consumers, resulting in a tightly coupled system with a fragile data pipeline",
+    "Solution":"Create a new publish-subscribe message brokering microservice which abstracts communication amongst services",
+    "Result": ["Decoupled producers from consumers, resulting in a data pipeline more resilient to individual service outages",
+      "Significantly reduced friction to publish or subscribe by organizing client code into a fluent interface",
+      "Simplified inter-service communication and minimized runtime errors by preserved strong typing of messages",
+     "Ensured that reliant services do not loose data during an outage through integration with MSMQ",
+     "Developed a library to generate unique publish and subscribe endpoints for each message, eliminating the need to modify code when adding a new type"]
+  },
+
+  {
+    "jobId": ["dataonline"],
+    "Name": "Publisher Regression Testing Library",
+    "Problem": "Development and operations teams must ensure the Publisher microservice is functional upon deployment",
+    "Solution":"Develop automated regression testing library and integrate into deployment process",
+    "Result": ["Achieved 100% test coverage of Publisher interface per messaging type ",
+      "Ensured client message queues are online and operational by devising task-based tests which efficiently listen for mock messages",
+      "Enabled automated test runs from the command line and future continuous-integration compatibilityby utilizing the NUnit framework"]
+  },
+
+  {
+    "jobId": ["dataonline"],
+    "Name": "eWon RTU API",
+    "Problem": "A new customer wantsto view and analyze data from their eWon remote telemetry unit on Dolv3",
+    "Solution":"Collaborate with customer to create a RESTful API to receive and parse eWon data transmissions",
+    "Result": ["Successfully integrated two eWon units in Puerto Rico into Dolv3, resulting in the acquisition of a new customer",
+      "Overcame problem of device identification through in-depth research of eWon software, leading to a simple and powerful file-based implementation",
+      "Facilitated future integration of devices from new customers by engineering, testing, and documenting a procedure for integrating eWon units into Dolv3",
+     ""]
+  },
+
+  {
+    "jobId": ["dataonline"],
     "Name": "Packet Counter Service",
     "Problem": "Counting carrier packets on the Dolv3 web client created excessive database load, leading to slow page load time and reduced database performance",
     "Solution":"Creation of microservice to perform packet counting in memory and store the count in the database",

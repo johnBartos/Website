@@ -1,44 +1,36 @@
 [
   {
     "jobId": ["dataonline", "rutgers"],
-    "Name": "C#",
-    "Skill": "Great"
-
+    "Name": "C#"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "JavaScript",
-    "Skill": "Good"
+    "Name": "JavaScript"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "HTML5",
-    "Skill": "Good"
+    "Name": "HTML5"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "CSS3",
-    "Skill": "Good"
+    "Name": "CSS3"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "PowerShell",
-    "Skill": "Good"
+    "Name": "PowerShell"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "SQL",
-    "Skill": "Good"
+    "Name": "SQL"
   },
 
   {
     "jobId": "dataonline",
-    "Name": "XML",
-    "Skill": "Good"
+    "Name": "XML"
   }
 ]
