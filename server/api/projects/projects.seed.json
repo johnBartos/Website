@@ -5,6 +5,11 @@
       "Link": "https://github.com/johnBartos/Website"
   },
   {
+      "Name": "Radio Free Twitch",
+      "Description": "Radio Free Twitch is a website where you can listen to just the audio of any Twitch.tv stream. The idea popped into my head the moment I woke up on my 23rd birthday; I had The International 5 playing off my car stereo earlier that week, and was annoyed that I had to waste all that power and bandwith for video I wasn't even watching. So I created a neat solution using Node.js streams that fetches the audio-only portion of a Twitch stream. Unfortunately, this project led to the realization that Flash is alive and well in the streaming ecosystem. The reason being is because nobody has ursurped it yet. While there are several competing standards for HTTP streaming, few browers actually support them - Twitch uses Apple's HLS protocol, but only Safari and Edge support it! While the current build work with Flash, I won't release until I can create a good solution using HTML5.",
+      "Link": "https://github.com/johnBartos/RadioFreeTwitch"
+  },
+  {
     "Name": "Visual Service Monitor",
     "Description": "This is a little PowerShell script I developed to provide a visual readout of service status. I'm a strong believer in making your own software tools; they don't need to be super-serious production-ready scripts with unit tests and lengthy documentation, just little helpers to make your life easier. I got tired of constantly repeating the same get-service command to check if a service was installed correctly. So I came up with this in my spare time. It provides a real-time readout of the status of services, and color codes the states for instant assessment. It also dynamically resizes the list when a service is added or removed, so it's perfect to monitor the progress of our installation process. Check out the git page, it has a little .gif of it in action.",
     "Link": "https://github.com/johnBartos/VisualServiceMonitor"
