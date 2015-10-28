@@ -1,7 +1,7 @@
 [
   {
       "Name": "This Website",
-      "Description": "A simple website created with the MEAN stack. I approached this project primarily as a learning exercise, which meant making some inconveinent choices. I chose to use 'Pure' implementations of technologies, so that meant pure JavaScript, HTML, and CSS. Scaffolding is cheating, so Yeoman was out (although I was inspired by the directory structure of Angular-Fullstack). While still not fully complete, I'm very happy with the results. I've learned a great deal, and feel much more confident doing web development.",
+      "Description": "A simple website created with the MEAN stack. This website has been and always will be a project for me to learn web development. To that end, I always try to build a feature myself before finding a library to do it for me. As a bonus, rolling your own software on your own time happens to be a lot of fun. It's also a good way for me to show off some of the cool things I work on! Occassionally I'll write a blog post, but I'm still learning to find my voice so they're not very good.",
       "Link": "https://github.com/johnBartos/Website"
   },
   {
