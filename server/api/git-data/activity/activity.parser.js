@@ -31,7 +31,8 @@ function parsePushEvents (pushList) {
 
 function formatPush (push) {
   var formattedPush = {
-    date: moment(push.created_at).fromNow(),
+    // date: moment(push.created_at).fromNow(),
+    date: moment(push.created_at).calendar(),
     avatar_url: push.actor.avatar_url,
     repo: {
       name: push.repo.name,
