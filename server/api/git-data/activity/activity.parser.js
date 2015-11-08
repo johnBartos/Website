@@ -1,7 +1,5 @@
 'use strict';
 
-var moment = require('moment');
-
 var parser = module.exports = {};
 
 parser.parse = function (activityList) {

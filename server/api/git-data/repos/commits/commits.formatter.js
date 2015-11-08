@@ -1,6 +1,5 @@
 'use strict';
 
-var moment = require('moment');
 
 exports.format = function (blob, n){
   var commits = JSON.parse(blob);
