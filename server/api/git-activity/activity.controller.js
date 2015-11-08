@@ -4,7 +4,7 @@ var rp = require('request-promise');
 var errors = require('request-promise/errors');
 
 var cache = require('./activity.cache.js');
-var parser = require('./activity.parser.js');
+var formatter = require('./activity.formatter.js');
 
 
 var activityController = module.exports = {};
@@ -61,7 +61,7 @@ var getActivityOptions = function (etag) {
 
 function getActivityTransform (body, response) {
   return {
-    activity: parser.parse(body),
+    activity: formatter.format(body),
     etag: response.headers.etag
   };
 }

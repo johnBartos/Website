@@ -1,13 +1,11 @@
 'use strict';
 
-var parser = module.exports = {};
+var formatter = module.exports = {};
 
-parser.parse = function (activityList) {
+formatter.format = function (activityList) {
   var commits = getPushesFromActivityList(JSON.parse(activityList));
 
-  console.log(commits);
-
-  return parsePushEvents(commits);
+  return formatPushEvents(commits);
 };
 
 function getPushesFromActivityList (activityJson) {
@@ -16,7 +14,7 @@ function getPushesFromActivityList (activityJson) {
    });
 }
 
-function parsePushEvents (pushList) {
+function formatPushEvents (pushList) {
   var parsedPushEvents = [];
 
   for (var push of pushList) {
