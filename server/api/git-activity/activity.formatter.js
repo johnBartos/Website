@@ -1,15 +1,11 @@
 'use strict';
 
-var moment = require('moment');
+var formatter = module.exports = {};
 
-var parser = module.exports = {};
-
-parser.parse = function (activityList) {
+formatter.format = function (activityList) {
   var commits = getPushesFromActivityList(JSON.parse(activityList));
 
-  console.log(commits);
-
-  return parsePushEvents(commits);
+  return formatPushEvents(commits);
 };
 
 function getPushesFromActivityList (activityJson) {
@@ -18,7 +14,7 @@ function getPushesFromActivityList (activityJson) {
    });
 }
 
-function parsePushEvents (pushList) {
+function formatPushEvents (pushList) {
   var parsedPushEvents = [];
 
   for (var push of pushList) {
@@ -31,8 +27,7 @@ function parsePushEvents (pushList) {
 
 function formatPush (push) {
   var formattedPush = {
-    //date: moment(push.created_at).fromNow(),
-    date: moment(push.created_at).format('MMMM Do [at] h:mm a'),
+    date: push.created_at,
     avatar_url: push.actor.avatar_url,
     repo: {
       name: push.repo.name,

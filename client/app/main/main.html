@@ -22,7 +22,7 @@
         <uib-slide ng-repeat="e in activity.events">
           <div class="row event-header">
             <div class="col-md-12 title centered">
-              <h4>Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date"></span></h4>
+              <h4>Pushed to <a ng-href="{{e.repo.url}}"><span ng-bind="e.repo.name"></span></a> <span ng-bind="e.date | fromNow"></span></h4>
               <hr>
             </div>
           </div>

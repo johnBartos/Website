@@ -9,7 +9,7 @@ angular.module('websiteApp')
 
   function getActivity () {
     return new Promise(function (resolve, reject) {
-      $http.get('/api/git-data/activity')
+      $http.get('/api/git-activity')
         .then(function (result) {
           resolve(result.data);
         })
