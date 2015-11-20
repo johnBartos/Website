@@ -9,11 +9,11 @@
 
 <div class = "container post-list">
   <div class = "row">
-    <div ng-repeat="p in posts.list | orderBy:'Date':true">
+    <div ng-repeat="p in posts.list | orderBy:'DateEpoch':true">
       <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
             <h2> {{p.Title}} </h2>
-            <h5 class = "text-muted"> {{p.Date}} </h5>
-            <div ng-bind-html='p.Content | to_trusted'></div>
+            <h5 class = "text-muted"> {{p.Date}}</h5>
+            <div ng-bind-html="p.Content | to_trusted"></div>
             <hr>
       </div>
     </div>
