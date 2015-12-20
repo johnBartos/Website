@@ -2,12 +2,18 @@
 <div ng-include="'components/footer/footer.html'"></div>
 <link rel="stylesheet" type="text/css" href="app/blog/blog.css" />
 
-<div class = "container">
+<div class="container">
   <h1>Blag</h1>
   <hr>
 </div>
 
 <div class = "container post-list">
+  <div class = "row">
+    <a ng-href="/blog/posts/manhattanjs">POST</a>
+  </div>
+</div>
+
+<!-- <div class = "container post-list">
   <div class = "row">
     <div ng-repeat="p in posts.list | orderBy:'DateEpoch':true">
       <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
@@ -18,4 +24,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
