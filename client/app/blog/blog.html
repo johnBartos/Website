@@ -9,19 +9,125 @@
 
 <div class = "container post-list">
   <div class = "row">
-    <a ng-href="/blog/posts/manhattanjs">POST</a>
-  </div>
-</div>
 
-<!-- <div class = "container post-list">
-  <div class = "row">
-    <div ng-repeat="p in posts.list | orderBy:'DateEpoch':true">
-      <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
-            <h2> {{p.Title}} </h2>
-            <h5 class = "text-muted"> {{p.Date}}</h5>
-            <div ng-bind-html="p.Content | to_trusted"></div>
-            <hr>
-      </div>
+<div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
+  <h1>Move Fast In Style</h1>
+  <hr>
+  Programming is also hard. Style is hard. Programming style? Doubly so. What's easy is to ignore style altogether and <i>Move Fast</i>™. But style is one of the most important aspects of writing good code - and it can make you go faster.
+  <br>
+  Simply put, style is the way code is presented. Indenting, whitespace, variable naming, bracketing, capitalization, and really way too much to worry about fall under this category. But the simple placement of characters is an oversimplification. A better definition is that style is the <i>intent</i> behind the way code is presented. Style is used to display code in such a way that it's readable, maintainable, and in many cases, more performant. So if you don't have style - get some.
+  <br>
+  Luckily for you (and me), style is easily stolen. In fact, it's even encouraged! The linter is an invaluable tool to introduce and maintain style based on what a community of developers feel is correct. Linters vary in their degree of opinion and extremes at which they force their style upon you, and are available even for uncool languges like C#. For my Javascript work, I use ESLint with Airbnb's (<a>https://github.com/airbnb/javascript</a>) styleguide and an additional guide made by a friend of mine (<a>https://github.com/ghinks/ConvertingToES2015/blob/master/.eslintrc2015</a>). I used to use JSHint, but I recently switched because I wanted <i>more</i> style. For C#, ReSharper is bar none the best.
+  <br>
+  So how does style make you move fast? At first, it probably doesn't. Switching from JSHint to ESLint introduced 50+ errors across one of my smaller projects. But adopting a good style gives your code consistency. Consistency gives you (or anyone reading your code) the ability to infer properties and behavior without having to refer back to initial declaration or scan line by line - it's essentially produces a mental hashtable. When variable names are consistent, you can infer their access modifiers and use by name and capitalization alone. Consistent location of variable declaration makes it easy to see what a class or module consists of. Whitespace and indentation consistentency gives you the ability to infer scope and encapsulation. Since programming 90% reading code (and 10% writing), having consistent code makes it much easier for another developer (or future you) to jump in and orient themselves. Get a consistent style and stop yo-yoing around the code base.
+  <hr>
+</div>
+    <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
+      <h1>ManhattanJS</h1>
+      <h5 class="text-muted">November 17, 2015</h5>
+      Last week was my first visit to the ManhattanJS meetup. And it was awesome. I've been to the AngularJS NYC meetup before but had a mixed experience. In a word, it was sterile - carefully prepared snacks, bouncers at the door, and people standing around awkwardly with hands in pocket. Everyone seemed to know everyone else (but me). The talk was interesting, but I left early.
+      </br></br>
+       But ManhattanJS was awesome. Beer, pizza, and a nice communal layout which made it easy to jump into different groups. Everyone was talking. There was music playing. It was <i>loud</i>. I got into discussions about how awesome Ember, microservice fetishes, and developer life in NYC. After the food, we shuffled over to the adjacent room for the main show - battledecks, followed by a tech talk and a 'passion' talk. For the unaware, battledecks is a game played by giving a presentation about a random set of powerpoint slides in front of an audience. I didn't participate but after a few beers I was wishing I had.
+      </br></br>
+       The next talk was about hypercard (Apple's 1998 edition of web technology), which humorously mocked the webdev trends with retro tech fads. Soon after was the tech talk. The topic was Mobiledoc, a new way of writing platform-agnostic markup with a bunch of cool features. And then came the 'passion talk'. Each event the organizers choose from a pool of members willing to give a talk about any topic they're passionate about. This event's talk was about YAF - young adult fiction. Animorphs, specifically, and how reading them helped her navigate emotional stress. And how Ellimist, who split into several pieces (each with a different function) when tricked into a black hole, was able to defeat Crayak with his newfound modular nature. Strength over intergalactic beasts - another great benefit of using microservices! Overall, ManhattanJS was a great experience. Next adventure - BrooklynJS!
+      <hr>
+    </div>
+    <div class = "col-md-offset-2 col-md-8 post col-md-offset-2">
+      <h1>John @ Uncubed - LIVE</h1>
+      <h5 class="text-muted">November 3, 2015</h5>
+      <ul>
+        <li>
+          10:00 - Arrival! Really excited to be here (again). The venue this year is much more segmented but it's quite nice. Still no Windows Phone app!
+        </li>
+        <li>
+          10:30 - Grabbed a free cold brew and headed upstairs to sit in on the Edge segments, which are more tailored for developers. Great talk by Namely CTO about hiring.I'm pretty hopped up on caffeine. Going to have a quick chat with her after the talk.
+        </li>
+        <li>
+          11:00 - Jet CTO is up, talking about microservices. They use a similar architecture to ours - microservices using a message bus/broker to communicate. Going to ask if they daisy chain services or are strict about using their bus for everything. Interesting point - they don't really do code reviews. Shoutout to YAGNI. F# as their main language is pretty sweet, definitely interested in that. No time for my question!
+        </li>
+        <li>
+          11:40 - Dropbox Product Designer is up. Only been working there 20 days! A lot of focus on product design.
+        </li>
+        <li>
+          11:40 - Had a quick chat with Jet CTO. Got a lot of good ideas about how to improve our microservice architecture. They try to be really strict about using their service bus and not doing one-to-one communication. Only do it if it's absolutely necessary. They also have multiple message brokers, which is a great idea. Something we kicked about internally but it'll be great to bring some authortative knowledge to the team. I'll have to look into Azure service buses also. He previously held a C# developer position at CitiGroup and covered a lot of the same ground we are! When I described our message broker he said his was almost identical - I was glad to hear that they made a successful system with the WCF netmsmq bindings. I think he liked my system for automatically generating WCF bindings without config files, since that was a large issue for them. I also asked him about their abandoment of code reviews. They used to have them, dropped them while getting their team on track (moving quickly?), but are bringing them back soon. We're definitely on the right track at DataOnline.
+        </li>
+        <li>
+          12:00 - Market yourself to your dream employer. I'm hungry but really want to listen in on this. Showcase yourself online - check (but does anyone actually read this?). Looks like I need to get my LinkedIn in order. Interesting point for learning about a company - read their code. He mentioned Medium, which I've been seeing a lot of on HN. I'll have to look into it. He keeps emphasizing the importance of a personal site. Understand what your dream company wants (100000 years of experience, probably).
+        </li>
+        <li>
+          13:00 - The floor begins!
+        </li>
+        <li>
+          15:20 - Quick break from the madness. Lots of good stuff so far and the layout is better so less crowding. This grapefruit beer is pretty good.
+        </li>
+        <li>
+          17:00 - Heading over to the front desk for my volunteer shift. Free tshirt! Takes a while for me to find a size medium. Trying to look busy while somebody tells me what to do. Looks like I'll be peeling vinyl stickers for a while.
+        </li>
+        <li>
+            19:00 - I'm free to go, and more than ready to sleep. The guy running the Batch booth gave us some free soap for our help. Smells delicious.
+        </li>
+      </ul>
+        A great event all around. This time I was much more prepared, and I was glad to be. Lots of great engineers and startups. The NYC developer scene is amazing and I hope to be part of it soon. "
+      <hr>
+    </div>
+      <div class="col-md-offset-2 col-md-8 post col-md-offset-2">
+        <h1>C# 6 and .NET 4 - Small Stuff</h1>
+        <h5 class="text-muted">July 23, 2015</h5>
+        C# 6.0 (and .NET 4.6) has finally, publically, and officially dropped. As full-time C# developer (and a big fan of the language), this is definitely exciting.While this update isn't groundbreaking in the sense of large, crazy awesome features, it's groundbreaking in the sense of small, crazy awesome improvements. And even more groundbreaking is the fact that .NET is now open source. Mostly. It's a pivotal moment in the .NET ecosystem and another step in a new direction for Microsoft. Here are some of the features I'm most excited about:
+      </br></br>
+      <ul>
+      <li>
+        <b>String Interpolation:</b> In the world of syntatic sugar, this is some pure, unrefined, all-natural cane sugar. Strings are among (if not) the most common data type and by far the easiest to make a mess of. Messy strings are particularly annoying because they create a lot of noise - I shouldn't need to care about the specifics of formatting a string for output (looking at you, <code>%d</code>), deal with the hassle of concatenating bits of strings to work with variables, or depend on other libraries to make the experience tolerable. The first two greviences has C# already has gotten right with composite formatting:
+      </br></br>
+        <div class = \"code-container\"><code>Console.WriteLine(\"The rain in {0} falls mainly on the {1}\", \"Spain\", \"plain\")</code></div>
+      </br>
+        Much better, but far from perfect. The arguments are positional and of the <code>object</code> type, so it's easy to put a variable in the wrong place, especially when modifying an existing implementation. Another downside is its forced imperative style. You must express <i>how</i> to create a string using <code>String.Format()</code> (or classes which implement it, like <code>Console.WriteLine()</code>) rather than programming <i>what</i> you want you want it to look like. Now, enter string interpolation:
+      </li>
+      </br>
+        <div class = \"code-container\"><code>$\"The Year {DateTime.UtcNow, yyyy} is {DateTime.StarDate, yyyy} in StarDate!\"</code></div>
+      </br>
+        There's no hassle of lining up the arguments in your, fumbling with <code>+ \" \" +</code>, or resorting to <code>String.Concat</code>.The declarative nature is much less noisy, leading to simpler code which strongly shows your intent. Under the hood, string interpolation compiles into a <code>String.Format></code> object so you're still able to leverage its great features, but they're neatly encapsulated - thus reducing the amount of noise to a single <code>$</code>.
+      </br></br>
+      <li>
+        <b>Null-Conditional Operator:</b> Nulls are a necessary evil. And where there's a null, there's a null check - usually in the form of <code>if (foo != null)</code>. Simple, verbose, and awful for nested objects. But now there's the null-conditional operator:
+      </br></br>
+        <div class = \"code-container\"><code>int meaningofLife = DeepThought?.UltimateQuestion?.Answer() ?? 42</code></div>
+      </br>
+        It's a short-syntaxed, short-circuiting way to check for pesky nulls. Like String Interpolation, it's not ground-breaking or novel. But it's simple, clean, and cuts the boilerplate. Oh, and it works on indicies too.
+      </br></br>
+      <li>
+        <b>Auto-Property Initializers:</b> Properties are another awesome feature of C#. They're members which read, write, or compute values for a private backing field, and are accessed using special methods called accessors. Properties are ubiquitous in C# codebases and are a best practice for exposing public variables, like so:
+      </br></br>
+        <div class = \"code-container\"><code>public BeanFactory AbstractJavaBeanFactoryFactory { get; set; }</code></div>
+      </br>
+        Properties are also the preferred way to create immutable objects, which I do quite a lot of. There's just one problem: verbosity. Access modifiers on properties apply to both the getter and setter, meaning that if the <code>{ get; }</code> method is public, the <code>{ set; }</code> can't be set to <code>readonly</code>. So you must create a <code>private readonly</code> backing field, initialize it from the constructor, and create a new property which gets that readonly value. Ouch. Auto-Property initializers elegantly solve this problem, making it my favorite feature of C# 6.0:
+      </br></br>
+        <div class = \"code-container\"><code>public int ImAReadonlyMember {get;}</code></div>
+      </br>
+        When the setter is omitted, the compiler automatically generates a corresponding readonly backing field. This one small change will result in thousands of lines stricken from our codebase (with the help of Resharper, of course). Immutability done right!
+      </li>
+      </br>
+      <li>
+        <b>.NET Core:</b> In this release Microsoft has officially RTM'd the .NET Core Platform, a an open-source collection of libraries based on the .NET Framework. It consists primarily of the CoreCLR runtime and CoreFX libraries, with Roslyn Compiler more of a sibling project which it supports. Here's a brief rundown of the key components:
+      </br></br>
+      <ul>
+        <li>
+          <b>Roslyn:</b> A C# and VB compiler platform(!) with code analysis APIs. The philosophy behind this project is to open up the \"black box\" of the compiler through an API, exposing the information it knows and generates. Information previously hidden by Microsoft is now available to us developers - and it's super powerful. It's what makes Visual Studio awesome. The main implication here is that Visual Studio (or at least intellisense) may soon be found on free, cross-platform editors.
+        </li>
+        </br>
+        <li>
+          <b>CoreCLR:</b> First, a quick rundown of what the CLR is. Simply put, the CLR is a virtual machine which executes .NET code. It receives compiled Common Intermediate Lanauge (CIL) code and packs it into a CIL assembly. When executed by the CLR, this assembly is translated via JIT into native code, which is then executed by the CPU. The fundamental features of the CLR garbage collection, memory and type safety, and high-level language support.<a href=\"https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md\">This great article</a> goes much more in depth. The open-sourcing of CoreCLR allows developers to port it cross-platform - in fact, ports of Linux, OSX, and FreeBSD are already passing builds.
+        </li>
+        </br>
+        <li>
+          <b>CoreFX:</b> CoreFX is a set of libraries encapsulating key areas of .NET. This includes, well, pretty much everything in the <code>System.*</code> namespace (even LINQ!). Unlike the CoreCLR, CoreFX is agnostic of CPU or OS - it's compatible with any .NET runtime. If you've ever developed with C# you know how awesome these libraries are. For the average developer, this is probably the most useful piece of the .NET Core.
+        </li>
+      </ul>
+    </ul>
+      </br>
+        The main motivation behind the .NET Core is to allow .NET to be brought cross-platform. By doing this Microsoft is hoping to gain the support, agility, and innovation of the open-source community. With the .NET Framework cross-platforming isn't possible - you must download its entirety including Windows-only libraries. This makes it heavy, hard to port, and unsuitable on anything but Windows. With .NET Core Microsoft has broken key functionality away from Windows-only libraries, paving the way for robust cross-platform implementations and less resource usage. As a bonus it's hosted on GitHub (RIP CodePlex) and distributed via NuGet. Exciting!
+      </li>
+      </li>
     </div>
   </div>
-</div> -->
+</div>

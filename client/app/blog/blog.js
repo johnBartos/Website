@@ -8,8 +8,4 @@ angular.module('websiteApp')
     templateUrl: 'app/blog/blog.html',
     controller: 'BlogController'
   })
-  .state('blog-post-manhattanjs', {
-    url: '/blog/posts/manhattanjs',
-    templateUrl: 'app/blog/posts/manhattanjs.html'
-    });
 });
