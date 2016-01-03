@@ -1,6 +1,13 @@
-# MEANsite
-Website created using the MEAN stack with best practices
+#This is my website/blog
+This is the source code behind my website/blog. It was my first attempt at making a website - miraculously, it didn't end in complete disaster! After three revisions, I think it looks pretty fine. >>> johnbartos.io <<<
 
-Styled with CSS, templated with HTML
 
-This is my first stab at creating a website so I'm trying to avoid technologies that make my life easier
+![the_site](https://i.imgur.com/cnrdVQx.png)
+
+
+##Technologies
+This site is overengineered with the MEAN stack. At the time I chose Angular because it was popular, but I don't think it's that great anymore. It's obviously styled with bootstrap. I accidentally hosted it on the US West region of AWS. 
+
+
+##The future of johnbartos.io
+In the near future I'm going to abandon this project and create a much simpler alternative. One of the key things I've learned from this project is that simple is good, and Angular is far from simple.
