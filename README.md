@@ -1,8 +1,8 @@
 #This is my website/blog
-This is the source code behind my website/blog. It was my first attempt at making a website - miraculously, it didn't end in complete disaster! After three revisions, I think it looks pretty fine. >>> johnbartos.io <<<
+This is the source code behind my website/blog. It was my first attempt at making a website - miraculously, it didn't end in complete disaster! After three revisions, I think it looks pretty fine. >>> [go here](johnbartos.io) <<<
 
 
-![the_site](https://i.imgur.com/cnrdVQx.png)
+![pic](https://i.imgur.com/cnrdVQx.png)
 
 
 ##Technologies
