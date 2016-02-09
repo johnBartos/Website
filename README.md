@@ -1,4 +1,4 @@
-#This is my website/blog
+#This ~~is~~ was my website/blog (see: [yocto-blog](https://github.com/johnBartos/yocto-blog))
 Actually, it's the source code behind my website/blog. It was my first attempt at making a website - miraculously, it didn't end in complete disaster! After three revisions, I think it looks pretty fine. >>> [go here](http://johnbartos.io) <<<
 
 
